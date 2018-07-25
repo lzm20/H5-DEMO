@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>2017 Qlik 可视化数据分析峰会</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <script src="qing/lib/jquery/jquery.min.js"></script>
+  <script>
+    !(function(win, doc){
+      function ss(){
+        var size = (window.innerWidth / 640) * 100;
+        doc.documentElement.style.fontSize = (size < 100 ? size : 100) + 'px';
+        if(typeof mySwiper != "undefined") mySwiper.onResize();
+        if(typeof adapterFullScreen != "undefined") adapterFullScreen(0);
+      }
+      var evt = 'resize';
+      var timer = null;
+      win.addEventListener(evt,function(){
+        clearTimeout(timer);
+        timer = setTimeout(ss, 300);
+      }, false);
+      win.addEventListener("pageshow",function(e){
+        if (e.persisted){
+          clearTimeout(timer);
+          timer = setTimeout(ss, 300);
+        }
+      }, false);
+      ss();
+    }(window, document));
+	</script>
+  <script src="http://qing.huandengpai.com/public/baidu/statistics.js"></script>
+  <script src="http://qing.huandengpai.com/public/methods/js/methods.zm.js"></script>
+</head>
+<body>
+    <div class="gridContainer">
+        <link href="qing/css/reset.css" rel="stylesheet" type="text/css">
+        <link href="qing/css/swiper.min.css" rel="stylesheet" type="text/css">
+        <link href="css/common.css" rel="stylesheet" type="text/css">
+        <div class="_qp lockTouchmove">
+            <div id="lp" class="lockTouchmove">
+                <img style="position: absolute;width: 30%;height: auto;left: 35%;top: 4rem;" src="qing/images/loading/_loadingC.png" alt="">
+                <img class="_loadingZ" style="position: absolute;width: 30%;height: auto;left: 35%;top: 4rem;" src="qing/images/loading/_loadingZ.png" alt="">
+                <div style="position: absolute;width: 100%;height: auto;left: 0;top: 2.15rem;text-align: center;color: #fff;font-size: .3rem;" class="_laoding_text">
+                    <span></span>
+                </div>
+            </div>
+            <div class="hide_element">
+                <img src="images/earth/e1.jpg" alt=""><img src="images/earth/e2.jpg" alt=""><img src="images/earth/e3.jpg" alt=""><img src="images/earth/e4.jpg" alt=""><img src="images/earth/e5.jpg" alt=""><img src="images/earth/e6.jpg" alt=""><img src="images/earth/e7.jpg" alt=""><img src="images/earth/e8.jpg" alt=""><img src="images/earth/e9.jpg" alt=""><img src="images/earth/e10.jpg" alt=""><img src="images/earth/e11.jpg" alt=""><img src="images/earth/e12.jpg" alt=""><img src="images/earth/e13.jpg" alt=""><img src="images/earth/e14.jpg" alt=""><img src="images/earth/e15.jpg" alt=""><img src="images/earth/e16.jpg" alt=""><img src="images/earth/e17.jpg" alt=""><img src="images/earth/e18.jpg" alt=""><img src="images/earth/e19.jpg" alt=""><img src="images/earth/e20.jpg" alt=""><img src="images/earth/e21.jpg" alt=""><img src="images/earth/e22.jpg" alt=""><img src="images/earth/e23.jpg" alt=""><img src="images/earth/e24.jpg" alt=""><img src="images/earth/e25.jpg" alt=""><img src="images/earth/e26.jpg" alt=""><img src="images/earth/e27.jpg" alt=""><img src="images/earth/e28.jpg" alt=""><img src="images/earth/e29.jpg" alt=""><img src="images/earth/e30.jpg" alt=""><img src="images/earth/e31.jpg" alt=""><img src="images/earth/e32.jpg" alt=""><img src="images/earth/e33.jpg" alt=""><img src="images/earth/e34.jpg" alt=""><img src="images/earth/e35.jpg" alt=""><img src="images/earth/e36.jpg" alt=""><img src="images/earth/e37.jpg" alt=""><img src="images/earth/e38.jpg" alt=""><img src="images/earth/e39.jpg" alt=""><img src="images/earth/e40.jpg" alt=""><img src="images/earth/e41.jpg" alt=""><img src="images/earth/e42.jpg" alt=""><img src="images/earth/e43.jpg" alt=""><img src="images/earth/e44.jpg" alt=""><img src="images/earth/e45.jpg" alt=""><img src="images/earth/e46.jpg" alt=""><img src="images/earth/e47.jpg" alt=""><img src="images/earth/e48.jpg" alt=""><img src="images/earth/e49.jpg" alt=""><img src="images/earth/e50.jpg" alt=""><img src="images/earth/e51.jpg" alt=""><img src="images/earth/e52.jpg" alt=""><img src="images/earth/e53.jpg" alt=""><img src="images/earth/e54.jpg" alt=""><img src="images/earth/e55.jpg" alt=""><img src="images/earth/e56.jpg" alt="">
+            </div>
+            <audio id="audiobg" src="http://hdp-video.oss-cn-beijing.aliyuncs.com/html/qlik/VYWbgMusic.mp3" loop></audio>
+            <div id="switch" class='open'></div>
+            <div class="swiper-container swiper-container-main">
+                <div class="swiper-wrapper">
+                    <!-- 首页 -->
+                    <div class="swiper-slide p0">
+                      <div class="item item1">
+                        <img src="images/i1/bg1.jpg" alt="" class="bg_img">
+                        <img src="images/i1/i1y1.png" alt="" class="i1_y1">
+                        <img src="images/i1/i1y2.png" alt="" class="i1_y2">
+                        <img src="images/i1/i1_g.png" alt="" class="i1_g">
+                        <img src="images/i1/i1t.png" alt="" class="i1t">
+                        <img src="images/i1/i1b.png" alt="" class="i1b">
+                        <div class="i1c">
+                            <img src="images/i1/i1c_1.png" alt="" class="i1c_1">
+                            <div class="i1_x1">
+                              <div class="i1_x1_in">
+                                <div></div>
+                              </div>
+                            </div>
+                            <div class="i1_x2">
+                              <div class="i1_x2_in">
+                                <div></div>
+                              </div>
+                            </div>
+                            <div class="i1c_2">
+                              <div class="i1c_2_in">
+                                <div></div>
+                              </div>
+                            </div>
+                            <img src="images/i1/i1c_3.png" alt="" class="i1c_3">
+                            <div class="i1c_4">
+                              <div class="i1c_4_in">
+                                <div></div>
+                              </div>
+                            </div>
+                            <div class="i1c_5">
+                              <div class="i1c_5_in">
+                                <div></div>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="item item2">
+                        <img src="images/i2/cloud.jpg" alt="" class="cloud">
+                        <div class="i2zi_c">
+                          <img src="images/i2/i2zi_0.png" alt="" class="i2zi_0">
+                          <img src="images/i2/i2zi_1.png" alt="" class="i2zi i2zi_1">
+                          <img src="images/i2/i2zi_2.png" alt="" class="i2zi i2zi_2">
+                        </div>
+                        <img src="images/i2/floor.png" alt="" class="floor">
+                        <div class="item2_op">
+                            <div class="i2_f1"><div class="i2_f1_inner"><div></div></div></div>
+                            <div class="i2_f2"><div class="i2_f2_inner"><div></div></div></div>
+                            <div class="i2_f3"><img src="images/i2/i2_f3.png" alt=""></div>
+                            <div class="i2_f4"><div class="i2_f4_inner"><div></div></div></div>
+                            <div class="i2_f5"><div class="i2_f5_inner"><div></div></div></div>
+                            <div class="i2_f6"><div class="i2_f6_inner"><div></div></div></div>
+                            <div class="i2_f7"><img src="images/i2/i2_f7.png" alt=""></div>
+                        </div>
+                      </div>
+                      <div class="item item3">
+                          <img src="images/i3/bg3.jpg" alt="" class="bg_img">
+                          <div class="i3c">
+                             <img src="images/i3/i3c1.png" alt="" class="i3cy1 i3cy">
+                             <img src="images/i3/i3c2.png" alt="" class="i3cy2 i3cy">
+                             <div class="i3c_item i3c_item1">
+                                <img src="images/i3/i3zi1_1.png" alt="" class="i3c_item1-1">
+                                <img src="images/i3/i3zi1_2.png" alt="" class="i3c_item1-2">
+                                <img src="images/i3/i3zi1_3.png" alt="" class="i3c_item1-3">
+                                <img src="images/i3/i3zi1_4.png" alt="" class="i3c_item1-4">
+                             </div>
+                             <div class="i3c_item i3c_item2">
+                                <img src="images/i3/i3zi2_1.png" alt="" class="i3c_item2-1">
+                                <img src="images/i3/i3zi2_2.png" alt="" class="i3c_item2-2">
+                                <img src="images/i3/i3zi2_3.png" alt="" class="i3c_item2-3">
+                             </div>
+                             <div class="i3c_item i3c_item3">
+                                <img src="images/i3/i3zi3_1.png" alt="" class="i3c_item3-1">
+                                <img src="images/i3/i3zi3_2.png" alt="" class="i3c_item3-2">
+                                <img src="images/i3/i3zi3_3.png" alt="" class="i3c_item3-3">
+                                <img src="images/i3/i3zi3_4.png" alt="" class="i3c_item3-4">
+                             </div>
+                          </div>
+                      </div>
+                      <div class="item item4">
+                        <img src="images/i4/bg4.jpg" alt="" class="bg_img">
+                        <img src="images/i4/i4zi1.png" alt="" class="i4zi i4zi1">
+                        <img src="images/i4/i4zi2.png" alt="" class="i4zi i4zi2">
+                        <img src="images/i4/i4zi3.png" alt="" class="i4zi i4zi3">
+                        <img src="images/i4/i4zi4.png" alt="" class="i4zi i4zi4">
+                        <img src="images/i4/i4zi5.png" alt="" class="i4zi i4zi5">
+                        <img src="images/i4/i4zi6.png" alt="" class="i4zi i4zi6">
+                        <div class="i4b1">
+                          <img src="images/i4/i4b1.png" alt="" class="bg_img">
+                          <span class="i4b1_count"></span>
+                        </div>
+                        <div class="i4b2">
+                          <img src="images/i4/i4b2.png" alt="" class="bg_img">
+                          <span class="i4b2_count"></span>
+                        </div>
+                        <div class="i4b3">
+                          <img src="images/i4/i4b3.png" alt="" class="bg_img">
+                          <span class="i4b3_count"></span>
+                        </div>
+                      </div>
+                      <div class="item item5">
+                        <img src="images/i5/i5zi1.png" alt="" class="i5zi1">
+                        <img src="images/i5/i5zi2_1.png" alt="" class="i5zi2 i5zi2_1">
+                        <img src="images/i5/i5zi2_2.png" alt="" class="i5zi2 i5zi2_2">
+                        <img src="images/i5/i5zi2_3.png" alt="" class="i5zi2 i5zi2_3">
+                        <div class="earth cen">
+                          <canvas id="myCanvas" data-source="images/earth/e"></canvas>
+                          <img src="images/i5/sh.png" alt="" class="sh">
+                        </div>
+                      </div>
+                      <div class="item item6">
+                          <img src="images/i6/bg6.jpg" alt="" class="bg_img">
+                          <img src="images/i6/title.png" alt="" class="i6title">
+                          <div class="avatar">
+                            <img src="images/i6/avatar1.png" alt="">
+                          </div>
+                          <div class="name">
+                            <img src="images/i6/name1.png" alt="" class="ssa ss1">
+                            <img src="images/i6/name2.png" alt="" class="ssa ss2">
+                            <img src="images/i6/name3.png" alt="" class="ssa ss3">
+                            <img src="images/i6/name4.png" alt="" class="ssa ss4">
+                            <img src="images/i6/name5.png" alt="" class="ssa ss5">
+                            <img src="images/i6/name6.png" alt="" class="ssa ss6">
+                            <img src="images/i6/name7.png" alt="" class="ssa ss7">
+                            <img src="images/i6/name8.png" alt="" class="ssa ss8">
+                            <img src="images/i6/name9.png" alt="" class="ssa ss9">
+                            <img src="images/i6/name10.png" alt="" class="ssa ss10">
+                            <img src="images/i6/name11.png" alt="" class="ssa ss11">
+                          </div>
+                          <img src="images/i6/desc_1.png" alt="" class="desc desc_1">
+                          <img src="images/i6/desc_2.png" alt="" class="desc desc_2">
+                          <img src="images/i6/desc_3.png" alt="" class="desc desc_3">
+                          <img src="images/i6/desc_4.png" alt="" class="desc desc_4">
+                      </div>
+                      <div class="item item7">
+                        <img src="images/i7/bg7.jpg" alt="" class="bg_img">
+                        <img src="images/i7/i7c_1.png" alt="" class="i7c i7c_1">
+                        <img src="images/i7/i7c_2.png" alt="" class="i7c_2">
+                        <div class="sign_up_btn"></div>
+                        <div class="look_meet_btn"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 向下的箭头 -->
+            <div class="downLoad" id="downLoad"></div>
+        </div>
+        <div class="meet">
+          <div class="meeting leave">
+            <div class="back"><img src="images/back.png" alt=""></div>
+            <img src="images/schedule/1.jpg" alt="">
+            <img src="images/schedule/2.jpg" alt="">
+            <img src="images/schedule/3.jpg" alt="">
+            <img src="images/schedule/4.jpg" alt="">
+          </div>
+          <div class="sign_up_now">立即报名</div>
+        </div>
+        <script src="qing/js/swiper.min.js"></script>
+        <script src="js/frameAnimate.js"></script>
+        <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+        <script src="js/common.js"></script>
+        <script>
+            var mySwiper = new Swiper('.swiper-container-main',{
+                direction: 'vertical',
+                onlyExternal : true,
+                onInit: function(swiper){
+                    if( swiper.activeIndex >= swiper.slidesSizesGrid.length-1 ){
+                        DownUp.hide();
+                    }else{
+                        DownUp.show();
+                    }
+                },
+                onSlideChangeEnd: function(swiper){
+                    showPage(swiper);
+                }
+            });
+        </script>
+        <!--微信分享start -->
+        <div id="share_js"></div>
+        <script src="http://api.huandengpai.com/sites/all/modules/oceanus_weixin_js_sdk/js/weixn_share_js_sdk.js"></script>
+        <script>
+            function getWXShare( title,desc,link,imgUrl ){
+                $.ajax({
+                    type:"POST",
+                    url:"http://api.huandengpai.com/api/weixin/js/share",
+                    data:{title:title, desc:desc,link:link, imgUrl:imgUrl, visiting_url : window.location.href,weixin:1 },
+                    async:false,
+                    success: function(json_data){
+                        var data = JSON.parse(json_data)
+                        console.log( data );
+                        $('#share_js').html(data.data);
+                    }
+                });
+            }
+            getWXShare( '数据不变，分析前所未见 | 2017 Qlik 可视化数据分析峰会诚邀您莅临！',
+                    '2017年11月16日 | 上海，让分析前所未见，用数据点亮世界',
+                    'http://qing.huandengpai.com/tem/Qlik/VYW/',
+                    'http://qing.huandengpai.com/tem/Qlik/VYW/images/share.jpg');
+            __setupAllWeixinShare();
+        </script>
+    </div>
+</body>
+</html>

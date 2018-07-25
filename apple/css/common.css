@@ -1,0 +1,339 @@
+body{
+    font-family: 'Helvetica Neue', Helvetica, STHeiTi, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.SHADE{
+    z-index: 11;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.BOX-V{
+            box-orient: vertical;
+    -webkit-box-orient: vertical;
+       -moz-box-orient: vertical;
+    -ms-flex-direction: column;
+}
+.BOX-D{
+    box-align: end;
+            box-pack: center -webkit-box-align: end;
+    -webkit-box-pack: center;
+    -ms-flex-align: end;
+    -ms-flex-pack: center;
+}
+.BOX-M{
+            box-align: center;
+            box-pack: center;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+}
+.BOX-S{
+    display: block;
+            box-flex: 1;
+    -webkit-box-flex: 1;
+       -moz-box-flex: 1;
+    -ms-flex: 1;
+}
+.BOX,
+.BOX-V,
+.BOX-D,
+.BOX-M,
+.FOOTER{
+    display:         box;
+    display: -webkit-box;
+    display:    -moz-box;
+    display: -ms-flexbox;
+}
+.BBOX,
+.BOX,
+.APP-STAGE,
+.INSET-STAGE,
+.STAGE,
+.PAGE-STAGE,
+.PAGE,
+.PAGE-BOX,
+.INSET-PAGE,
+.FOOTER{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+#welcome{
+    font-weight: bold;
+    overflow: hidden;
+    text-align: center;
+}
+.welcome-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6.4rem;
+}
+.welcome-bg img{
+	width: 6.4rem;
+}
+#ready-btn{
+	position: absolute;
+	top:8.12rem;
+	left: 50%;
+	-webkit-transform:translate3d(-50%,0rem,0rem);
+	width: 2.4rem;
+	height: 0.85rem;
+}
+.welcome_rules{
+	position: absolute;
+	top:9.12rem;
+	left:50%;
+	-webkit-transform:translate3d(-50%,0rem,0rem);
+	width: 1.6rem;
+	height: 0.22rem;
+}
+.welcome_rules img{
+	width: 1.6rem;
+	height: 0.22rem;
+}
+#ready-btn img{
+	width: 2.4rem;
+	height: 0.85rem;
+}
+#GameTimeLayer{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 6.4rem;
+    height: 2.15rem;
+    background: url("../images/top.jpg")no-repeat;
+    background-size:100%; 
+    overflow: hidden;
+}
+#GameScoreLayer_close{
+    position: absolute;
+    top:2.12rem;
+    right:0.54rem;
+    width: 0.6rem;
+    height: 0.6rem;
+}
+#GameTimeLayer .GameTimeLayerinner{
+	position: absolute;
+	top:1.16rem;
+	left: 2.46rem;
+	color:#fff;
+	font-size: 0.5rem;
+    width: 1.6rem;
+    height: 0.75rem;
+    text-align: center;
+    line-height: 0.75rem;
+}
+.GameTimeLayerCount{
+    position: absolute;
+    top: 1.49rem;
+    right: 0.3rem;
+    color: #fff;
+    font-size: 0.36rem;
+    width: 1rem;
+    height: 0.5rem;
+    text-align: center;
+    line-height: 0.5rem;
+}
+#GameLayerBG{
+    top: 2rem;
+    left:0rem;
+    width: 6.4rem;
+    overflow: hidden;
+    background: url("../images/content.jpg")no-repeat;
+    background-size:100%; 
+    box-sizing:border-box;
+}
+.GameLayer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.block{
+    position: absolute;
+    border-top: 1px dashed #fff;
+    border-bottom: 1px dashed #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.t1,
+.t2,
+.t3,
+.t4,
+.t5{
+    background-image: url(../images/640.png);
+    background-size: auto 100%;
+}
+.tt1,
+.tt2,
+.tt3,
+.tt4,
+.tt5{
+    /*background-image: url(../images/l.png);*/
+    /*background-size: auto 86%;*/
+}
+.bl{
+    border-left: 1px dashed #fff;
+}
+@-ms-keyframes flash
+{
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+@-webkit-keyframes flash
+{
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.flash{
+    -webkit-animation: flash .2s 3;
+            animation: flash .2s 3;
+}
+/*点错误之后的背景颜色*/
+.bad{
+    -webkit-animation: flash .2s 3;
+            animation: flash .2s 3;
+    background-color: #f00;
+}
+*{
+    -ms-user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -ms-tap-highlight-color: rgba(0,0,0,0);
+            tap-highlight-color: rgba(0,0,0,0);
+}
+#GameScoreLayer{
+	width: 6.4rem;
+	height: 10.4rem;
+	background: url("../images/end.png")no-repeat;
+	background-size:100%; 
+}
+.bgc1{
+    background-color: #23378b;
+}
+.bgc2{
+    background-color: #009fe3;
+}
+.bgc3{
+    background-color: #e42313;
+}
+.bgc4{
+    background-color: #fcbd1b;
+}
+.bgc5{
+    background-color: #34002a;
+}
+.share-icon{
+    width: 1.7em;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+#GameScoreLayer-btn .btn{
+	position: absolute;
+	top:6.87rem;
+	width: 2.7rem;
+	height: 0.7rem;
+	left:50%;
+	-webkit-transform:translate3d(-50%,0rem,0rem);
+}
+.go_to_shop{
+	position: absolute;
+	top:7.86rem;
+	left:50%;
+	-webkit-transform:translate3d(-50%,0rem,0rem);
+	width: 2.7rem;
+	height: 0.7rem;
+}
+.btn:active{
+    opacity: .2;
+}
+#landscape{
+    display: none;
+}
+#gameBody{
+    position: relative;
+    width: 640px;
+    height: 100%;
+    margin: 0 auto;
+}
+#share-wx{
+    position: absolute;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+}
+.pop-ups{
+	position: absolute;
+	top:0rem;
+	left:0rem;
+	width: 6.4rem;
+	height: 10.4rem;
+    background: rgba(0,0,0,.8);
+    z-index: 99;
+    overflow: hidden;
+    display: none;
+}
+.pop-ups img{
+	width: 6.4rem;
+}
+.pop-ups ._rules{
+	position: absolute;
+	top:2.08rem;
+	left:0rem;
+	width: 6.4rem;
+	height: 5.49rem;
+}
+.pop-ups ._rules img{
+	position: absolute;
+	top:0rem;
+	left:0rem;
+	width: 6.4rem;
+	height: 5.49rem;
+}
+._rules_close{
+	position: absolute;
+	top:0.1rem;
+	right:0.33rem;
+	width: 0.65rem;
+	height: 0.65rem;
+}
+#GameScoreLayer-text{
+	position: absolute;
+    top: 3.62rem;
+    left: 2.4rem;
+	font-size: 0.24rem;
+	color:#ff0000;
+	/*font-weight: bold;*/
+}
+.GameScoreLayer_integral{
+    position: absolute;
+    top: 4.13rem;
+    left: 3.62rem;
+    font-size: 0.24rem;
+    color:#ff0000;
+    /*font-weight: bold;*/
+}
+.GameScoreLayer_frequency{
+    position: absolute;
+    top: 5.23rem;
+    left: 1.93rem;
+    font-size: 0.3rem;
+    color:#ff0000;
+    /*font-weight: bold; */
+}
+
+
+
+
+

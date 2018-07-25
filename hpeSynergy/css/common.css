@@ -1,0 +1,378 @@
+.gridContainer{
+  background-color: #fff;
+}
+#lp{
+    position: absolute;
+    width: 100%;
+    height: 10.4rem;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #000;
+}
+.swiper-slide{overflow: hidden;}
+.swiper-slide > img{width: 100%;}
+._ab{position: absolute;top: 0;left: 0;}
+._op0{opacity: 0;}
+._re{position: relative;}
+/*._loadingZ{-webkit-animation: _loading 2s linear infinite;animation: _loading 2s linear infinite}*/
+._loadingZ{-webkit-animation: _loadingop 2s linear infinite;animation: _loadingop 2s linear infinite}
+@-webkit-keyframes _loadingop
+{
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-webkit-keyframes _loading
+{
+    0%   {-webkit-transform:rotate(0deg);}
+    100% {-webkit-transform:rotate(360deg);}
+}
+@keyframes _loading
+{
+    0%   {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+/*向下的箭头*/
+.downLoad{
+  width: .52rem;
+  height: .37rem;
+  position: absolute;
+  left: 2.94rem;
+  top: 9.36rem;
+  z-index: 2;
+  background-image: url(../qing/images/arrow.png);
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  display: none;
+}
+.downLoad{-webkit-animation: topDown 2s infinite;}
+@-webkit-keyframes topDown{
+  0%{-webkit-transform:translate3d(0,0,0);}
+  100% { -webkit-transform:translate3d(0,-50%,0);}
+}
+.Mp3Con {
+    position: absolute;
+    right: 5%;
+    top: .3rem;
+    z-index: 999;
+    opacity: 0.5;
+    transition: all 2s;
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+}
+.Mp3ConAnimate {
+  animation: roundIng 10s linear infinite;
+  -webkit-animation: roundIng 10s linear infinite;
+  -moz-animation: roundIng 10s linear infinite;
+}
+@keyframes roundIng {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes roundIng {
+  0% {
+    -webkit-transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes roundIng {
+  0% {
+    -moz-transform: rotate(0);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+
+
+/*常用动画*/
+@-webkit-keyframes fadeIn
+{
+    0%  {opacity: 0}
+    100%  {opacity: 1}
+}
+@-webkit-keyframes fadeOut
+{
+    0%  {opacity: 1}
+    100%  {opacity: 0}
+}
+@-webkit-keyframes leftFadeIn
+{
+    0%  {-webkit-transform:translate(-.2rem, 0);opacity: 0}
+    100%  {-webkit-transform: translate(0, 0);opacity: 1}
+}
+@-webkit-keyframes bottomFadeIn
+{
+    0%  {-webkit-transform:translate(0, -.2rem);opacity: 0}
+    100%  {-webkit-transform: translate(0, 0);opacity: 1}
+}
+@-webkit-keyframes rightFadeIn
+{
+    0%  {-webkit-transform:translate(.2rem, 0);opacity: 0}
+    100%  {-webkit-transform: translate(0, 0);opacity: 1}
+}
+@-webkit-keyframes topFadeIn
+{
+    0%  {-webkit-transform:translate(0, .2rem);opacity: 0}
+    100%  {-webkit-transform: translate(0, 0);opacity: 1}
+}
+
+
+.gridContainer{
+    color: #fff;
+}
+/*添加类代表特定的东西*/
+.open{
+    position: absolute;
+    top:5.7rem;
+    left: 0.44rem;
+    width:2.43rem;
+    height: 0.62rem;
+    z-index: 5;
+    background-image: url("/tem/hpeSynergy/images/kaiqi.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+.pa .open{
+    -webkit-animation:fadeIn 0.8s ease 2s both;
+}
+.preloading_img{
+    height: 0rem;
+    visibility: hidden;
+}
+.hengping{
+    position: absolute;
+    top:0rem;
+    width: 6.4rem;
+    height: 10.4rem;
+    left: 0rem;
+    z-index: 99;
+    display: none;
+}
+.cover_page{
+    position: absolute;
+    top:0rem;
+    left: 0rem;
+    width: 6.4rem;
+    height: 10.4rem;
+    z-index: 9;
+    background-color: #dedede;
+    color: red;
+}
+.open_music{
+    position: absolute;
+    top: 0.1rem;
+    right: 0.1rem;
+    width: 0.46rem;
+    height: 0.46rem;
+    z-index: 8;
+}
+.open_music1{
+    width: 0.36rem;
+    height: 0.36rem;
+}
+.swiper-container-main{
+    /*width: 10.4rem;*/
+    /*height: 6.4rem;*/
+}
+.prve{
+    position: absolute;
+    top:50%;
+    left:0.2rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    z-index: 2;
+    margin-top:-0.4rem; 
+    display: none;
+    background-image: url("/tem/hpeSynergy/images/prev.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-animation: _loadingopsss 3s linear infinite;
+}
+.next{
+    position: absolute;
+    top:50%;
+    right:0.2rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    z-index: 2;
+    margin-top:-0.4rem;
+    background-image: url("/tem/hpeSynergy/images/next.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-animation: _loadingopsss 3s linear infinite;
+}
+@-webkit-keyframes _loadingopsss
+{
+    0%{opacity: 1;}
+    35%{opacity: 0;}
+    65%{opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.zi1{
+    position: absolute;
+    top:1.86rem;
+    left:0.44rem;
+    width:2.38rem;
+    height: 1.26rem;
+    opacity: 0;
+}
+.pa .zi1{
+    -webkit-animation:fadeIn 0.4s ease 0.5s both;
+}
+.zi2{
+    position: absolute;
+    top:3.44rem;
+    left:0.44rem;
+    width:3.59rem;
+    height: 1.37rem;
+    opacity: 0;
+}
+.pa .zi2{
+    -webkit-animation:fadeIn 0.4s ease 1s both;
+}
+/*CSS处理*/
+/*竖屏时样式*/
+@media all and (orientation:portrait){ 
+    .swiper-container-main{
+        display: none;
+    }
+    ._qp {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:100%;
+        height: 100%;
+        -webkit-transform-origin: top center;
+        transform-origin: top center;
+        overflow: hidden;
+    }
+}
+/*横屏时样式*/
+@media all and (orientation:landscape){
+    .cover_page{
+        display: none;
+    }
+    .p0 > img{
+        width: 100%;
+        height: 100%;
+    }
+    .p0{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    ._qp {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transform-origin: top center;
+        transform-origin: top center;
+        overflow: hidden;
+        background-color: #f3f3f3;
+    }
+    .gridContainer {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        margin:0;
+    }
+}
+.blocking_layer{
+    position: absolute;
+    top:0rem;
+    left: 0rem;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 99;
+    display: none;
+}
+.item img.bg{
+    position: absolute;
+    top:0rem;
+    left: 0rem;
+    width: 100%;
+    height: 100%;
+}
+.btn{
+    position: absolute;
+    width: 0.4rem;
+    height: 0.4rem;
+    z-index: 3;
+    background-image: url("/tem/hpeSynergy/images/btn.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+}
+.item{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.btn1{
+    top:0.5rem;
+    left:2.98rem;
+}
+.btn2{
+    top:0.31rem;
+    left:4.95rem;
+}
+.btn3{
+    top:1.77rem;
+    left:2.41rem;
+}
+.content{
+    position: absolute;
+    top:50%;
+    -webkit-transform:translate3d(0rem,-50%,0rem);
+    display: none;
+}
+.content>div{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    margin:0.2rem 0rem;
+}
+.content1,.content2,.content0{
+    left:0.1rem;
+    width: 1.7rem;
+}
+.content3,.content4,.content5{
+    right:0.2rem;
+    width: 1.9rem;
+}
+.c1{
+    min-height: 0.4rem;
+}
+.c2{
+    color: #000000;
+    font-size: 0.18rem;
+    font-weight: bold;
+}
+.c3{
+    color: #000000;
+    font-size: 0.12rem;
+    /*font-weight: bold;*/
+}
+
+
+

@@ -1,0 +1,451 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>SAP SuccessFactors网络盛会</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <script src="qing/lib/jquery/jquery.min.js"></script>
+  <script>
+    !(function(win, doc){
+      function ss(){
+        var size = (window.innerWidth / 640) * 100;
+        doc.documentElement.style.fontSize = (size < 100 ? size : 100) + 'px';
+        if(typeof mySwiper != "undefined") mySwiper.onResize();
+        if(typeof adapterFullScreen != "undefined") adapterFullScreen(0);
+      }
+      var evt = 'resize';
+      var timer = null;
+      win.addEventListener(evt,function(){
+        clearTimeout(timer);
+        timer = setTimeout(ss, 300);
+      }, false);
+      win.addEventListener("pageshow",function(e){
+        if (e.persisted){
+          clearTimeout(timer);
+          timer = setTimeout(ss, 300);
+        }
+      }, false);
+      ss();
+    }(window, document));
+	</script>
+  <script src="http://qing.huandengpai.com/public/baidu/statistics.js"></script>
+</head>
+<body>
+    <div class="gridContainer">
+        <link href="qing/css/reset.css" rel="stylesheet" type="text/css">
+        <link href="qing/css/swiper.min.css" rel="stylesheet" type="text/css">
+        <link href="css/common.css" rel="stylesheet" type="text/css">
+        <div class="_qp lockTouchmove">
+            <div id="lp" class="lockTouchmove">
+                <img style="position: absolute;width: 30%;height: auto;left: 35%;top: 4rem;" src="qing/images/loading/_loadingC.png" alt="">
+                <img class="_loadingZ" style="position: absolute;width: 30%;height: auto;left: 35%;top: 4rem;" src="qing/images/loading/_loadingZ.png" alt="">
+                <div style="position: absolute;width: 100%;height: auto;left: 0;top: 2.15rem;text-align: center;color: #fff;font-size: .3rem;" class="_laoding_text">
+                    <span></span>
+                </div>
+            </div>
+            <div class="hide_elemet">
+              <img src="images/close.png" alt="">
+              <img src="images/open.png" alt="">
+            </div>
+            <audio id="audiobg" src="mp3/a1.mp3" loop="loop"></audio>
+            <div id="switch" class='open'></div>
+            <div class="swiper-container swiper-container-main">
+                <div class="swiper-wrapper">
+                    <!-- 首页 -->
+                    <div class="swiper-slide p1">
+                        <img src="images/p1/p_bg1.png" alt="" class="p1-bg1">
+                        <img src="images/p1/p_bg2.png" alt="" class="p1-bg2">
+                        <img src="images/p1/p_bg3.png" alt="" class="p1-bg3">
+                        <img src="images/p1/p_bg4.png" alt="" class="p1-bg4">
+                        <div class="tiao-box">
+                            <img src="images/p1/tiao1.png" alt="" class="tiao1">
+                            <img src="images/p1/tiao2.png" alt="" class="tiao2">
+                            <img src="images/p1/tiao3.png" alt="" class="tiao3">
+                            <img src="images/p1/tiao4.png" alt="" class="tiao4">
+                            <img src="images/p1/tiao5.png" alt="" class="tiao5">
+                            <img src="images/p1/tiao6.png" alt="" class="tiao6">
+                            <img src="images/p1/tiao7.png" alt="" class="tiao7">
+                            <img src="images/p1/tiao8.png" alt="" class="tiao8">
+                        </div>
+                        <img src="images/logo.png" alt="" class="logo">
+                        <div class="cloud">
+                            <img src="images/p1/cloud.png" alt="" class="">
+                        </div>
+                        <img src="images/p1/biaoti.png" alt="" class="p1-biaoti">
+                        <div class="watch">
+                            <img src="images/p1/watch.png" alt="" class="p1-watch1">
+                            <img src="images/p1/watch1.png" alt="" class="p1-watch2">
+                            <img src="images/p1/watch2.png" alt="" class="p1-watch3">
+                            <div class="p1-text">
+                                <img src="images/p1/text11.png" alt="" class="p1-text11">
+                                <img src="images/p1/text12.png" alt="" class="p1-text12">
+                                <img src="images/p1/text13.png" alt="" class="p1-text13">
+                            </div>
+                        </div>
+                        <div class="p1-text3">
+                            <img src="images/p1/p1-text3.png" alt="" class="p1-text30">
+                            <img src="images/p1/p1-text31.png" alt="" class="p1-text31">
+                            <img src="images/p1/p1-text32.png" alt="" class="p1-text32">
+                            <img src="images/p1/p1-text33.png" alt="" class="p1-text33">
+                            <img src="images/p1/p1-text34.png" alt="" class="p1-text34">
+                        </div>
+                    </div>
+                    <div class="swiper-slide p2">
+                        <img src="images/p2/p2-bg1.png" alt="" class="p2-bg1">
+                        <img src="images/p2/p2-bg2.png" alt="" class="p2-bg2">
+                        <img src="images/p2/p2-bg3.png" alt="" class="p2-bg3">
+                        <div class="p2-tiao">
+                            <img src="images/p2/p2-tiao1.png" alt="" class="p2-tiao1">
+                            <img src="images/p2/p2-tiao2.png" alt="" class="p2-tiao2">
+                            <img src="images/p2/p2-tiao3.png" alt="" class="p2-tiao3">
+                            <img src="images/p2/p2-tiao4.png" alt="" class="p2-tiao4">
+                            <img src="images/p2/p2-tiao5.png" alt="" class="p2-tiao5">
+                            <img src="images/p2/p2-tiao6.png" alt="" class="p2-tiao6">
+                        </div>
+                        <img src="images/logo.png" alt="" class="logo">
+                        <div class="light">
+                            <div class="light-inner">
+                                <img src="images/p2/light.png" alt="" class="light1">
+                            </div>
+                            <img src="images/p2/light1.png" alt="" class="light2">
+                            <div class="light-box">
+                                <div class="light-item"></div>
+                                <div class="light-item"></div>
+                                <div class="light-item"></div>
+                                <div class="light-item"></div>
+                            </div>
+                        </div>
+                        <div class="p2-text1">
+                            <img src="images/p2/p2-text11.png" alt="" class="p2-text11">
+                            <img src="images/p2/p2-text12.png" alt="" class="p2-text12">
+                        </div>
+                        <div class="p2-text2">
+                            <img src="images/p2/p2-text21.png" alt="" class="p2-text21">
+                            <img src="images/p2/p2-text22.png" alt="" class="p2-text22">
+                        </div>
+                        <img src="images/p2/p2-text3.png" alt="" class="p2-text3">
+                        <div class="p2-bot">
+                            <img src="images/p2/p2-bt-y1.png" alt="" class="p2-bot1">
+                            <img src="images/p2/p2-bt-y2.png" alt="" class="p2-bot2">
+                            <img src="images/p2/p2-bt-y3.png" alt="" class="p2-bot3">
+                            <img src="images/p2/p2-bt-y4.png" alt="" class="p2-bot4">
+                            <img src="images/p2/p2-bt-y5.png" alt="" class="p2-bot5">
+                        </div>
+                    </div>
+                    <div class="swiper-slide p3">
+                        <img src="images/p3/p3_bg1.png" alt="" class="p3-bg1">
+                        <img src="images/p3/p3_bg2.png" alt="" class="p3-bg2">
+                        <img src="images/p3/p3_bg3.png" alt="" class="p3-bg3">
+                        <div class="p3_tiao">
+                            <img src="images/p3/p3_tiao1.png" alt="" class="p3_tiao1">
+                            <img src="images/p3/p3_tiao2.png" alt="" class="p3_tiao2">
+                            <img src="images/p3/p3_tiao3.png" alt="" class="p3_tiao3">
+                            <img src="images/p3/p3_tiao4.png" alt="" class="p3_tiao4">
+                            <img src="images/p3/p3_tiao5.png" alt="" class="p3_tiao5">
+                            <img src="images/p3/p3_tiao6.png" alt="" class="p3_tiao6">
+                        </div>
+                        <img src="images/logo.png" alt="" class="logo">
+                        <div class="p3_t">
+                            <img src="images/p3/p3_t1.png" alt="" class="p3_t1">
+                            <img src="images/p3/p3_t2.png" alt="" class="p3_t2">
+                        </div>
+                        <div class="p3-center">
+                            <img src="images/p3/p3_c_bg.png" alt="" class="p3_c_x">
+                            <img src="images/p3/p3_c_bg2.png" alt="" class="p3_c_x1">
+
+                            <div class="p3_c_centent">
+                                <div class="p3_c_inner">
+                                    <div class="p3-item p3-item1">
+                                        <div class="p3-item1-y">
+                                            <img class='p3_item1_y_img' src="images/p3/item1/item4_y.png" alt="">
+                                            <div class="p3-item1-y-p">
+                                                <div class="p3_item1_y_img">
+
+                                                </div>
+                                            </div>
+                                            <div class="p3_item1_text1">30%</div>
+                                        </div>
+                                        <div class="p3_i1_x1">
+                                            <div class="i1_x1_inner">
+                                                <img src="images/p3/xian1.png" alt="">
+                                            </div>
+                                        </div>
+                                        <img src="images/p3/item1/item4_text.png" alt="" class="item1_text">
+                                        <div class="p3_i1_x2">
+                                            <div class="i1_x2_inner">
+                                                <img src="images/p3/xian2.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p3-item p3-item2">
+                                        <div class="item2_y">
+                                            <img src="images/p3/item2/item2_y.png" alt="" class="item2_y_1">
+                                            <div class="item2_y_p">
+                                                <div class="item2_y_p_inner"></div>
+                                            </div>
+                                            <div class="p3_item2_text1"></div>
+                                        </div>
+                                        <div class="p3-i2-x1">
+                                            <div class="p3-i2-x1-inner">
+                                                <img src="images/p3/xian3.png" alt="">
+                                            </div>
+                                        </div>
+                                        <img src="images/p3/item2/item2_text.png" alt="" class="item2_text">
+                                    </div>
+                                    <div class="p3-item p3-item3">
+                                        <div class="p3-i3-x1">
+                                            <div class="p3-i3-x1-inner">
+                                                <img src="images/p3/xian4.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="item3_y">
+                                            <img src="images/p3/item3/item3_y.png" alt="" class="item3_y_1">
+                                            <div class="item3_y_p">
+                                                <div class="item3_y_p_inner"></div>
+                                            </div>
+                                            <div class="p3_item3_text1">30%</div>
+                                        </div>
+                                        <div class="p3-i3-x2">
+                                            <div class="p3-i3-x2-inner">
+                                                <img src="images/p3/xian1.png" alt="">
+                                            </div>
+                                        </div>
+                                        <img src="images/p3/item3/item3_text.png" alt="" class="item3_text">
+                                        <div class="p3-i3-x3">
+                                            <div class="p3-i3-x3-inner">
+                                                <img src="images/p3/xian2.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p3-item p3-item4">
+                                        <div class="item4_y">
+                                            <img src="images/p3/item4/item4_y.png" alt="" class="item4_y_1">
+                                            <div class="item4_y_p">
+                                                <div class="item4_y_p_inner"></div>
+                                            </div>
+                                            <div class="p3_item4_text1"></div>
+                                        </div>
+                                        <div class="p5-i4-x1">
+                                            <div class="p5-i4-x1-inner">
+                                                <img src="images/p3/xian3.png" alt="">
+                                            </div>
+                                        </div>
+                                        <img src="images/p3/item4/item4_text.png" alt="" class="item4_text">
+                                    </div>
+                                    <!-- <div class="p3-item p3-item5">
+                                        <div class="p5-i5-x1">
+                                            <div class='p5-i5-x1-inner'>
+                                                <img src="images/p3/xian4.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="p3-item5-y">
+                                            <img class='p3_item5_y_1' src="images/p3/item5/item5_y.png" alt="">
+                                            <div class="p3-item5-y-p">
+                                                <div class="p3_item5_y_p_img">
+
+                                                </div>
+                                            </div>
+                                            <div class="p3_item5_text1">30%</div>
+                                        </div>
+                                        <div class="p3_i5_x2">
+                                            <div class="i5_x2_inner">
+                                                <img src="images/p3/xian1.png" alt="">
+                                            </div>
+                                        </div>
+                                        <img src="images/p3/item5/item5_text.png" alt="" class="item5_text">
+                                        <div class="p3_i5_x3">
+                                            <div class="i5_x3_inner">
+                                                <img src="images/p3/xian2.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p3-item p3-item6">
+                                        <div class="item6_y">
+                                            <img src="images/p3/item6/item6_y.png" alt="" class="item6_y_1">
+                                            <div class="item6_y_p">
+                                                <div class="item6_y_p_inner"></div>
+                                            </div>
+                                            <div class="p3_item6_text1"></div>
+                                        </div>
+                                        <div class="p3-i6-x1">
+                                            <div class="p3-i6-x1-inner">
+                                                <img src="images/p3/xian3.png" alt="">
+                                            </div>
+                                        </div>
+                                        <img src="images/p3/item6/item6_text.png" alt="" class="item6_text">
+                                    </div>
+                                    <div class="p3-item p3-item7">
+                                        <div class="p3-i7-x1">
+                                            <div class="p3-i7-x1-inner">
+                                                <img src="images/p3/xian4.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="item7_y">
+                                            <img src="images/p3/item7/item7_y.png" alt="" class="item7_y_1">
+                                            <div class="item7_y_p">
+                                                <div class="item7_y_p_inner"></div>
+                                            </div>
+                                            <div class="p3_item7_text1"></div>
+                                        </div>
+                                        <div class="p3-i7-x2">
+                                            <div class="p3-i7-x2-inner">
+                                                <img src="images/p3/xian1.png" alt="">
+                                            </div>
+                                        </div>
+                                        <img src="images/p3/item7/item7_text.png" alt="" class="item7_text">
+                                    </div>
+                                    <div class="p3-item p3-item8">
+                                        <div class="p3-i8-x1">
+                                            <div class="p3-i8-x1-inner">
+                                                <img src="images/p3/xian2.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="item8_y">
+                                            <img src="images/p3/item8/item8_y.png" alt="" class="item8_y_1">
+                                            <div class="item8_y_p">
+                                                <div class="item8_y_p_inner"></div>
+                                            </div>
+                                            <div class="p3_item8_text1"></div>
+                                        </div>
+                                        <div class="p3-i8-x2">
+                                            <div class="p3-i8-x2-inner">
+                                                <img src="images/p3/xian3.png" alt="">
+                                            </div>
+                                        </div>
+                                        <img src="images/p3/item8/item8_text.png" alt="" class="item8_text">
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide p4">
+                        <img src="images/p4/p4-bg1.png" alt="" class="p4-bg1">
+                        <img src="images/p4/p4-bg2.png" alt="" class="p4-bg2">
+                        <img src="images/p4/p4-bg3.png" alt="" class="p4-bg3">
+                        <img src="images/p4/p4-bg4.png" alt="" class="p4-bg4">
+                        <div class="p4-tiao">
+                            <img src="images/p4/p4-tiao1.png" alt="" class="p4-tiao1">
+                            <img src="images/p4/p4-tiao2.png" alt="" class="p4-tiao2">
+                            <img src="images/p4/p4-tiao3.png" alt="" class="p4-tiao3">
+                            <img src="images/p4/p4-tiao4.png" alt="" class="p4-tiao4">
+                            <img src="images/p4/p4-tiao5.png" alt="" class="p4-tiao5">
+                            <img src="images/p4/p4-tiao6.png" alt="" class="p4-tiao6">
+                        </div>
+                        <img src="images/logo.png" alt="" class="logo">
+                        <img src="images/p4/p4-text.png" alt="" class="p4-text">
+                        <div class="p4-block">
+                            <img src="images/p4/block.png" alt="" class="p4-block1">
+                            <img src="images/p4/block1.png" alt="" class="p4-block2">
+                        </div>
+                        <div class="p4_bt1">
+                            <img src="images/p4/p4-b1.png" alt="" class="p4_bt1_1">
+                            <img src="images/p4/p4-b1-1.png" alt="" class="p4_bt1_2">
+                            <img src="images/p4/p4-b1-2.png" alt="" class="p4_bt1_3">
+                            <img src="images/p4/p4-b1-3.png" alt="" class="p4_bt1_4">
+                        </div>
+                        <div class="p4_bt2">
+                            <img src="images/p4/p4-b2.png" alt="" >
+                        </div>
+                        <div class="p4_bt3">
+                            <img src="images/p4/p4-b3.png" alt="">
+                        </div>
+                        <div class="p4_bt4">
+                            <img src="images/p4/p4-b4.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide p5">
+                        <img src="images/p5/p5-bg1.png" alt="" class="p5_bg1">
+                        <img src="images/p5/p5-bg2.png" alt="" class="p5_bg2">
+                        <img src="images/p5/p5-bg3.png" alt="" class="p5_bg3">
+                        <div class="p5-tiao">
+                            <img src="images/p5/p5-tiao1.png" alt="" class="p5-tiao1">
+                            <img src="images/p5/p5-tiao2.png" alt="" class="p5-tiao2">
+                            <img src="images/p5/p5-tiao3.png" alt="" class="p5-tiao3">
+                            <img src="images/p5/p5-tiao4.png" alt="" class="p5-tiao4">
+                            <img src="images/p5/p5-tiao5.png" alt="" class="p5-tiao5">
+                        </div>
+                        <div class="cloud">
+                            <img src="images/p1/cloud.png" alt="" class="">
+                        </div>
+                        <img src="images/logo.png" alt="" class="logo">
+                        <img src="images/p5/p5-z1.png" alt="" class="p5-z1">
+                        <img src="images/p5/p5-z2.png" alt="" class="p5-z2">
+                        <div class="p5-icon">
+                            <img src="images/p5/icon.png" alt="">
+                        </div>
+                        <img src="images/p5/p5-z3.png" alt="" class="p5-z3">
+                        <img src="images/p5/p5-z4.png" alt="" class="p5-z4">
+                        <a href="http://sap.pas365.cn/H5/meeting-detail.html?meetingid=100091" class="p5-bot">
+                            <div class="content">
+                                <div class="btn-list"></div>
+                                <div class="btn-list"></div>
+                                <div class="btn-list"></div>
+                                <div class="btn-list"></div>
+                            </div>
+                            <div class="text">立即注册</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 向下的箭头 -->
+            <div class="downLoad" id="downLoad"></div>
+        </div>
+        <script src="qing/js/swiper.min.js"></script>
+        <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+        <script>
+          var mySwiperp5 = new Swiper('.swiper-container-p5',{
+                onlyExternal : true,
+                slidesPerView : 1.3,
+                spaceBetween : 10,
+                loop:true,
+                speed:800,
+                centeredSlides:true,
+                autoplay : 1000,
+            });
+        </script>
+        <script src="js/common.js"></script>
+        <script>
+            var mySwiper = new Swiper('.swiper-container-main',{
+                direction: 'vertical',
+                onInit: function(swiper){
+                    if( swiper.activeIndex >= swiper.slidesSizesGrid.length-1 ){
+                        DownUp.hide();
+                    }else{
+                        DownUp.show();
+                    }
+                },
+                onSlideChangeEnd: function(swiper){
+                    showPage(swiper);
+                }
+            });
+        </script>
+        <!--微信分享start -->
+        <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+        <div id="share_js"></div>
+        <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+        <script src="http://api.huandengpai.com/sites/all/modules/oceanus_weixin_js_sdk/js/weixn_share_js_sdk.js"></script>
+        <script>
+            function getWXShare( title,desc,link,imgUrl ){
+                $.ajax({
+                    type:"POST",
+                    url:"http://api.huandengpai.com/api/weixin/js/share",
+                    data:{title:title, desc:desc,link:link, imgUrl:imgUrl, visiting_url : window.location.href,weixin:1 },
+                    async:false,
+                    success: function(json_data){
+                        var data = JSON.parse(json_data)
+                        console.log( data );
+                        $('#share_js').html(data.data);
+                    }
+                });
+            }
+            getWXShare( '以人为本，赋能HR知“云”善任，SAP SuccessFactors网络盛会等你而来！',
+                    '即刻注册参会，突破传统枷锁，体验云端蝶变，开创HR数字化转型新格局。',
+                    'http://qing.huandengpai.com/tem/sap/sapsf/',
+                    'http://qing.huandengpai.com/tem/sap/sapsf/images/share.jpg');
+            __setupAllWeixinShare();
+        </script>
+    </div>
+</body>
+</html>

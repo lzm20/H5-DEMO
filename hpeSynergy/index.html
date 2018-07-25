@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>HPE Synergy</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <script src="qing/lib/jquery/jquery.min.js"></script>
+  <script>
+    !(function(win, doc){
+      function ss(){
+        var size = (window.innerWidth / 640) * 100;
+        doc.documentElement.style.fontSize = (size < 100 ? size : 100) + 'px';
+        if(typeof mySwiper != "undefined") mySwiper.onResize();
+        if(typeof adapterFullScreen != "undefined") adapterFullScreen(0);
+      }
+      var evt = 'resize';
+      var timer = null;
+      win.addEventListener(evt,function(){
+        clearTimeout(timer);
+        timer = setTimeout(ss, 300);
+      }, false);
+      win.addEventListener("pageshow",function(e){
+        if (e.persisted){
+          clearTimeout(timer);
+          timer = setTimeout(ss, 300);
+        }
+      }, false);
+      ss();
+    }(window, document));
+	</script>
+</head>
+<body>
+    <div class="gridContainer">
+        <link href="/tem/hpeSynergy/qing/css/reset.css" rel="stylesheet" type="text/css">
+        <link href="/tem/hpeSynergy/qing/css/swiper.min.css" rel="stylesheet" type="text/css">
+        <link href="/tem/hpeSynergy/css/common.css" rel="stylesheet" type="text/css">
+        <div class="preloading_img">
+            <img src="/tem/hpeSynergy/images/1.gif" alt="">
+            <img src="/tem/hpeSynergy/images/2.gif" alt="">
+            <img src="/tem/hpeSynergy/images/3.gif" alt="">
+            <img src="/tem/hpeSynergy/images/4.gif" alt="">
+            <img src="/tem/hpeSynergy/images/5.gif" alt="">
+        </div>
+        <div class="_qp lockTouchmove">
+            <div id="lp" class="lockTouchmove">
+                <!-- <img style="position: absolute;width: 30%;height: auto;left: 35%;top: 4rem;" src="qing/images/loading/_loadingC.png" alt=""> -->
+                <img class="_loadingZ" style="position: absolute;width: 20%;left: 40%;top: 3rem;" src="/tem/hpeSynergy/images/load.png" alt="">
+                <div style="position: absolute;width: 100%;height: auto;left: 0;top: 4.3rem;text-align: center;color: #fff;font-size: .3rem;" class="_laoding_text">
+
+                </div>
+                <div style="position: absolute;width: 100%;height: auto;left: 0;top: 4.8rem;text-align: center;color: #fff;font-size: .3rem;" class="_laoding_prom">
+                     精彩马上呈现
+                </div>
+            </div>
+            <!-- <audio id="audio1" src="mp3/a1.mp3"></audio> -->
+            <div class="cover_page">
+                <img src="/tem/hpeSynergy/images/bg.jpg" alt="">
+                <img src="/tem/hpeSynergy/images/zi1.png" alt="" class="zi1">
+                <img src="/tem/hpeSynergy/images/zi2.png" alt="" class="zi2">
+
+                <div class="open_music">
+                    <img src="/tem/hpeSynergy/images/open.png" alt="">
+                </div>
+                <div class="open"></div>
+                <img src="/tem/hpeSynergy/images/heng.jpg" alt="" class="hengping">
+            </div>
+            <div class="swiper-container swiper-container-main">
+                <div class="swiper-wrapper">
+                    <!-- 首页 -->
+                    <div class="swiper-slide p0" data-temId="0">
+                        <div class="blocking_layer"></div>
+                        <div class="open_music open_music1">
+                            <img src="/tem/hpeSynergy/images/open.png" alt="">
+                        </div>
+                        <div id="prve" class="prve"></div>
+                        <div id="next" class="next"></div>
+                        <div class="item item0">
+                            <img class='bg' src="/tem/hpeSynergy/images/1.jpg" alt="">
+                            <div class="content content0">
+                                <div class="c2">
+                                  创意经济，灵活探索
+                                </div>
+                                <div class="c3">
+                                    无比灵活的IT基础设施，种种负载轻松适应，次次服务闪电完成。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item item1">
+                            <img class='bg' src="/tem/hpeSynergy/images/00.jpg" alt="">
+                            <div class="btn btn1" data-id="1"></div>
+                            <div class="btn btn2" data-id="2"></div>
+                            <div class="btn btn3" data-id="3"></div>
+                            <div class="content content1">
+                                <div class="c1">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="c2">
+                                    万千任务，运转无忧
+                                </div>
+                                <div class="c3">
+                                    HPE Synergy 让运算、存储、网络随时待命。一个资源池，每一次需求，即时配置。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item item2">
+                            <img class='bg' src="/tem/hpeSynergy/images/00.jpg" alt="">
+                            <div class="content content2">
+                                <div class="c2">
+                                    智能管理，动念即至
+                                </div>
+                                <div class="c3">
+                                    HEP Synergy 以软件定义智能取胜，一个界面，分秒之间，实现架构组合，加速业务运行。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item item3">
+                            <img class='bg' src="/tem/hpeSynergy/images/00.jpg" alt="">
+                            <div class="content content3">
+                                <div class="c2">
+                                    兼容并蓄，快无止境
+                                </div>
+                                <div class="c3">
+                                    组合资源配置、可复用的操作系统镜像模板，让运算快无止境。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item item4">
+                            <img class='bg' src="/tem/hpeSynergy/images/00.jpg" alt="">
+                            <div class="content content4">
+                                <div class="c2">
+                                    敏捷扩展，配置自如
+                                </div>
+                                <div class="c3">
+                                    自动整合的基础设施，让系统可横向纵向随意扩展。 根据企业规模轻松按需配置基础设施，自动更新固件、配置BIOS 与网络连接。
+                                </div>
+                                <div class="c1">
+                                    <img src="/tem/hpeSynergy/images/icon4.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item item5">
+                            <img class='bg' src="/tem/hpeSynergy/images/00.jpg" alt="">
+                            <div class="content content5">
+                                <div class="c2">
+                                    发现机遇，开放创新
+                                </div>
+                                <div class="c3">
+                                    统一API实现架构自由组合，一键式配置设计和可编程API接口，让合作伙伴可以大显身手。Synergy整合多种热门管理工具，采用开源软件和DevOps工具，包括Chef, Docker和OpenStack，有效降低成本。
+                                </div>
+                                <div class="c1">
+                                    <img src="/tem/hpeSynergy/images/icon5.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 向下的箭头 -->
+            <div class="downLoad" id="downLoad"></div>
+        </div>
+        <script src="/tem/hpeSynergy/qing/js/swiper.min.js"></script>
+        <script src="/tem/hpeSynergy/qing//lib/create/preloadjs-0.6.2.min.js"></script>
+        <script src="/tem/hpeSynergy/qing//lib/create/soundjs-0.6.2.min.js"></script>
+        <script src="/tem/hpeSynergy/js/common.js"></script>
+        <script>
+            var mySwiper = new Swiper('.swiper-container-main',{
+                onlyExternal:"true",
+                onInit: function(swiper){
+                    if( swiper.activeIndex >= swiper.slidesSizesGrid.length-1 ){
+                        DownUp.hide();
+                    }else{
+                        DownUp.show();
+                    }
+                },
+                onSlideChangeEnd: function(swiper){
+                    showPage(swiper);
+                }
+            });
+        </script>
+        <div id="share_js"></div>
+        <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+        <script src="http://api.huandengpai.com/sites/all/modules/oceanus_weixin_js_sdk/js/weixn_share_js_sdk.js"></script>
+        <script>
+                function getWXShare( title,desc,link,imgUrl ){
+                    var sharecontent = '';
+                    $.ajax({
+                        type:"POST",
+                        url:"http://api.huandengpai.com/api/weixin/js/share",
+                        data:{title:title, desc:desc,link:link, imgUrl:imgUrl, visiting_url : window.location.href },
+                        async:false,
+                        success: function(json_data){
+                        //console.log(json_data);
+                            var data = JSON.parse(json_data)
+                            console.log( data );
+                            sharecontent = data.data;
+                            $('#share_js').html(sharecontent);
+                        }
+
+                    });
+                }
+                 getWXShare(
+                        ' HPE Synergy——颠覆式创新的未来基础设施',
+                        '传统与新型IT的完美组合，集速而成，颠覆创新！',
+                         window.location.href,
+                        'http://qing.huandengpai.com/tem/hpeSynergy/images/share.jpg'
+                );
+                __setupAllWeixinShare();
+        </script>
+    </div>
+</body>
+</html>

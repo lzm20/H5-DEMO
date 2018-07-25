@@ -1,0 +1,396 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>旭日新生</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <script src="qing/lib/jquery/jquery.min.js"></script>
+  <script>
+    !(function(win, doc){
+      function ss(){
+        var size = (window.innerWidth / 640) * 100;
+        doc.documentElement.style.fontSize = (size < 100 ? size : 100) + 'px';
+        if(typeof mySwiper != "undefined") mySwiper.onResize();
+        if(typeof adapterFullScreen != "undefined") adapterFullScreen(0);
+      }
+      var evt = 'resize';
+      var timer = null;
+      win.addEventListener(evt,function(){
+        clearTimeout(timer);
+        timer = setTimeout(ss, 300);
+      }, false);
+      win.addEventListener("pageshow",function(e){
+        if (e.persisted){
+          clearTimeout(timer);
+          timer = setTimeout(ss, 300);
+        }
+      }, false);
+      ss();
+    }(window, document));
+	</script>
+</head>
+<body>
+    <div class="gridContainer">
+        <link href="qing/css/reset.css" rel="stylesheet" type="text/css">
+        <link href="qing/css/swiper.min.css" rel="stylesheet" type="text/css">
+        <link href="css/common.css" rel="stylesheet" type="text/css">
+        <div class="preloading">
+            <img src="images/back.png" alt="">
+            <img src="images/contact.png" alt="">
+            <img src="images/contact_box.png" alt="">
+            <img src="images/page0.jpg" alt="">
+            <img src="images/page1.jpg" alt="">
+            <img src="images/page2.jpg" alt="">
+            <img src="images/right.png" alt="">
+            <img src="images/share.jpg" alt="">
+
+            <img src="images/p0/bottom.png" alt="">
+            <img src="images/p0/description.png" alt="">
+            <img src="images/p0/logo.png" alt="">
+            <img src="images/p0/sy.jpg" alt="">
+            <img src="images/p0/title.png" alt="">
+
+            <img src="images/p1/g1/1.png" alt="">
+            <img src="images/p1/g1/2.png" alt="">
+            <img src="images/p1/g1/3.png" alt="">
+            <img src="images/p1/g1/4.png" alt="">
+            <img src="images/p1/g1/5.png" alt="">
+            <img src="images/p1/g1/gs.jpg" alt="">
+            <img src="images/p1/g1/instruction.png" alt="">
+            <img src="images/p1/g1/jj.jpg" alt="">
+            <img src="images/p1/g1/miaoshu.png" alt="">
+            <img src="images/p1/g1/titile.png" alt="">
+
+            <img src="images/p1/g2/bottom1.png" alt="">
+            <img src="images/p1/g2/bottom2.png" alt="">
+            <img src="images/p1/g2/g2.jpg" alt="">
+            <img src="images/p1/g2/g2_l1.png" alt="">
+            <img src="images/p1/g2/g2_l2.png" alt="">
+            <img src="images/p1/g2/g2_l3.png" alt="">
+            <img src="images/p1/g2/g2_l4.png" alt="">
+            <img src="images/p1/g2/g2_l5.png" alt="">
+            <img src="images/p1/g2/g2_l6.png" alt="">
+            <img src="images/p1/g2/g2_title.png" alt="">
+            <img src="images/p1/g2/right_d1.png" alt="">
+            <img src="images/p1/g2/right_d2.png" alt="">
+            <img src="images/p1/g2/right_d3.png" alt="">
+            <img src="images/p1/g2/right_d4.png" alt="">
+            <img src="images/p1/g2/right_d5.png" alt="">
+            <img src="images/p1/g2/right_red.png" alt="">
+
+            <img src="images/p1/g3/1.png" alt="">
+            <img src="images/p1/g3/2.png" alt="">
+            <img src="images/p1/g3/3.png" alt="">
+            <img src="images/p1/g3/4.png" alt="">
+            <img src="images/p1/g3/5.png" alt="">
+            <img src="images/p1/g3/6.png" alt="">
+            <img src="images/p1/g3/7.png" alt="">
+            <img src="images/p1/g3/8.png" alt="">
+            <img src="images/p1/g3/g3.jpg" alt="">
+            <img src="images/p1/g3/g3_title.png" alt="">
+            <img src="images/p1/g3/line.png" alt="">
+
+            <img src="images/p1/g4/1.png" alt="">
+            <img src="images/p1/g4/2.png" alt="">
+            <img src="images/p1/g4/3.png" alt="">
+            <img src="images/p1/g4/4.png" alt="">
+            <img src="images/p1/g4/5.png" alt="">
+            <img src="images/p1/g4/6.png" alt="">
+            <img src="images/p1/g4/7.png" alt="">
+            <img src="images/p1/g4/8.png" alt="">
+            <img src="images/p1/g4/9.png" alt="">
+            <img src="images/p1/g4/description.png" alt="">
+            <img src="images/p1/g4/g4.jpg" alt="">
+            <img src="images/p1/g4/title.png" alt="">
+
+            <img src="images/p1/g5/1.png" alt="">
+            <img src="images/p1/g5/2.png" alt="">
+            <img src="images/p1/g5/3.png" alt="">
+            <img src="images/p1/g5/g5.jpg" alt="">
+            <img src="images/p1/g5/g5_description.png" alt="">
+            <img src="images/p1/g5/g5_title.png" alt="">
+
+            <img src="images/p2/close.png" alt="">
+            <img src="images/p2/yfqh.jpg" alt="">
+            <img src="images/p2/yfqh1.png" alt="">
+            <img src="images/p2/yfqh2.png" alt="">
+            <img src="images/p2/yfqh3.png" alt="">
+
+            <img src="images/p3/1.jpg" alt="">
+            <img src="images/p3/2.jpg" alt="">
+            <img src="images/p3/3.jpg" alt="">
+            <img src="images/p3/4.jpg" alt="">
+            <img src="images/p3/5.jpg" alt="">
+            <img src="images/p3/6.jpg" alt="">
+            <img src="images/p3/7.jpg" alt="">
+            <img src="images/p3/8.jpg" alt="">
+            <img src="images/p3/9.jpg" alt="">
+            <img src="images/p3/10.jpg" alt="">
+            <img src="images/p3/11.jpg" alt="">
+            <img src="images/p3/12.jpg" alt="">
+            <img src="images/p3/13.jpg" alt="">
+            <img src="images/p3/1.png" alt="">
+            <img src="images/p3/2.png" alt="">
+            <img src="images/p3/3.png" alt="">
+            <img src="images/p3/4.png" alt="">
+            <img src="images/p3/5.png" alt="">
+            <img src="images/p3/6.png" alt="">
+            <img src="images/p3/7.png" alt="">
+            <img src="images/p3/8.png" alt="">
+            <img src="images/p3/9.png" alt="">
+            <img src="images/p3/10.png" alt="">
+            <img src="images/p3/11.png" alt="">
+            <img src="images/p3/12.png" alt="">
+            <img src="images/p3/13.png" alt="">
+            <img src="images/p3/footer.jpg" alt="">
+            <img src="images/p3/top.jpg" alt="">
+        </div>
+        <div class="_qp lockTouchmove">
+            <div id="lp" class="lockTouchmove">
+                <img style="position: absolute;width: 30%;height: auto;left: 35%;top: 4rem;" src="qing/images/loading/_loadingC.png" alt="">
+                <img class="_loadingZ" style="position: absolute;width: 30%;height: auto;left: 35%;top: 4rem;" src="qing/images/loading/_loadingZ.png" alt="">
+                <div style="position: absolute;width: 100%;height: auto;left: 0;top: 2.15rem;text-align: center;color: #fff;font-size: .3rem;" class="_laoding_text">
+                    <span></span>
+                </div>
+            </div>
+            <!-- <audio id="audio1" src="mp3/a1.mp3"></audio> -->
+            <div class="swiper-container swiper-container-main">
+                <div class="swiper-wrapper">
+                    <!-- 首页 -->
+                    <div class="swiper-slide p0">
+                        <img src="images/p0/sy.jpg" alt="" class="bg_p bg_p0">
+                        <div class="logo"><img src="images/p0/logo.png" alt=""></div>
+                        <div class="titile"><img src="images/p0/title.png" alt=""></div>
+                        <div class="description"><img src="images/p0/description.png" alt=""></div>
+                        <div class="bottom"><img src="images/p0/bottom.png" alt=""></div>
+                        <div class="prom_right"><img src="images/right.png" alt=""></div>
+                    </div>
+                    <div class="swiper-slide p1">
+                        <div class="swiper-container swiper-container-company-profile company-profile">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide g0 stop-swiping">
+                                    <img src="images/page1.jpg" alt="" class="bg_p">
+                                    <div class="list list1" data-number="2"></div>
+                                    <div class="list list2" data-number="3"></div>
+                                    <div class="list list3" data-number="4"></div>
+                                    <div class="list list4" data-number="1"></div>
+                                    <div class="contact"><img src="images/contact.png" alt=""></div>
+                                    <div class="contact_box">
+                                        <div class="contact_inner">
+                                            <img src="images/contact_box.png" alt="">
+                                            <div class="contact_close"></div>
+                                            <a href="tel:8008200921" class="contact_tel"></a>
+                                            <a href="http://unis-huashan.h3c.com" class="contact_web"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide g1">
+                                    <img src="images/p1/g1/gs.jpg" alt="" class="bg_p">
+                                    <div class="com_g1_title"><img src="images/p1/g1/titile.png" alt=""></div>
+                                    <div class="com_g1_miaoshu"><img src="images/p1/g1/miaoshu.png" alt=""></div>
+                                    <div class="com_g1_instruction"><img src="images/p1/g1/instruction.png" alt=""></div>
+                                    <div class="com_g1_1"><img src="images/p1/g1/1.png" alt=""></div>
+                                    <div class="com_g1_2"><img src="images/p1/g1/2.png" alt=""></div>
+                                    <div class="com_g1_3"><img src="images/p1/g1/3.png" alt=""></div>
+                                    <div class="com_g1_4"><img src="images/p1/g1/4.png" alt=""></div>
+                                    <div class="com_g1_5"><img src="images/p1/g1/5.png" alt=""></div>
+                                    <div class="prom"><img src="images/p1/prom.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide g2">
+                                    <img src="images/p1/g2/g2.jpg" alt="" class="bg_p">
+                                    <div class="com_g2_titile"><img src="images/p1/g2/g2_title.png" alt=""></div>
+                                    <div class="com_g2_list">
+                                        <img src="images/p1/g2/g2_l1.png" alt="" class="com_g2_li1">
+                                        <img src="images/p1/g2/g2_l2.png" alt="" class="com_g2_li2">
+                                        <img src="images/p1/g2/g2_l3.png" alt="" class="com_g2_li3">
+                                        <img src="images/p1/g2/g2_l4.png" alt="" class="com_g2_li4">
+                                        <img src="images/p1/g2/g2_l5.png" alt="" class="com_g2_li5">
+                                        <img src="images/p1/g2/g2_l6.png" alt="" class="com_g2_li6">
+                                    </div>
+                                    <div class="com_g2_right">
+                                        <img src="images/p1/g2/right_red.png" alt="" class="g2_right_bg">
+                                        <div class="g2_right">
+                                            <img src="images/p1/g2/right_d1.png" alt="" class="g2_right1">
+                                            <img src="images/p1/g2/right_d2.png" alt="" class="g2_right2">
+                                            <img src="images/p1/g2/right_d3.png" alt="" class="g2_right3">
+                                            <img src="images/p1/g2/right_d4.png" alt="" class="g2_right4">
+                                            <img src="images/p1/g2/right_d5.png" alt="" class="g2_right5">
+                                        </div>
+                                    </div>
+                                    <div class="com_g2_bottom1"><img src="images/p1/g2/bottom1.png" alt=""></div>
+                                    <div class="com_g2_bottom2"><img src="images/p1/g2/bottom2.png" alt=""></div>
+                                    <div class="prom"><img src="images/p1/prom.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide g3">
+                                    <img src="images/p1/g3/g3.jpg" alt="" class="g2_right_bg">
+                                    <div class="g3_title"><img src="images/p1/g3/g3_title.png" alt=""></div>
+                                    <div class="g3_1"><img src="images/p1/g3/1.png" alt=""></div>
+                                    <div class="g3_2"><img src="images/p1/g3/2.png" alt=""></div>
+                                    <div class="g3_3"><img src="images/p1/g3/3.png" alt=""></div>
+                                    <div class="g3_4"><img src="images/p1/g3/4.png" alt=""></div>
+                                    <div class="g3_5"><img src="images/p1/g3/5.png" alt=""></div>
+                                    <div class="g3_6"><img src="images/p1/g3/6.png" alt=""></div>
+                                    <div class="g3_7"><img src="images/p1/g3/7.png" alt=""></div>
+                                    <div class="g3_8"><img src="images/p1/g3/8.png" alt=""></div>
+                                    <div class="g3_line">
+                                        <div class="g3_line_inner">
+                                            <img src="images/p1/g3/line.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="prom"><img src="images/p1/prom.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide g4">
+                                    <img src="images/p1/g4/g4.jpg" alt="" class="bg_p">
+                                    <div class="g4_title"><img src="images/p1/g4/title.png" alt=""></div>
+                                    <div class="g4_1"><img src="images/p1/g4/1.png" alt=""></div>
+                                    <div class="g4_2"><img src="images/p1/g4/2.png" alt=""></div>
+                                    <div class="g4_3"><img src="images/p1/g4/3.png" alt=""></div>
+                                    <div class="g4_4"><img src="images/p1/g4/4.png" alt=""></div>
+                                    <div class="g4_5"><img src="images/p1/g4/5.png" alt=""></div>
+                                    <div class="g4_6"><img src="images/p1/g4/6.png" alt=""></div>
+                                    <div class="g4_7"><img src="images/p1/g4/7.png" alt=""></div>
+                                    <div class="g4_8"><img src="images/p1/g4/8.png" alt=""></div>
+                                    <div class="g4_description"><img src="images/p1/g4/description.png" alt=""></div>
+                                    <div class="prom"><img src="images/p1/prom.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide g5">
+                                    <img src="images/p1/g5/g5.jpg" alt="" class="bg_p">
+                                    <div class="g5_title"><img src="images/p1/g5/g5_title.png" alt=""></div>
+                                    <div class="g5_description"><img src="images/p1/g5/g5_description.png" alt=""></div>
+                                    <div class="g5_1"><img src="images/p1/g5/1.png" alt=""></div>
+                                    <div class="g5_2"><img src="images/p1/g5/2.png" alt=""></div>
+                                    <div class="g5_3"><img src="images/p1/g5/3.png" alt=""></div>
+                                    <div class="prom"><img src="images/p1/prom.png" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide p2">
+                          <img src="images/page2.jpg" alt="" class="bg_p">
+                          <div class="p2_back"><img src="images/back.png" alt=""></div>
+                          <div class="yiniweirong"><img src="images/p4/rong.png" alt=""></div>
+                          <div class="proud"><div></div></div>
+                          <div class="c_bg"><img src="images/p4/c-bg.png" alt=""></div>
+                          <div class="c"><div></div></div>
+                          <div class="bottom"><img src="images/p4/bottom.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 扬帆起航 -->
+            <div class="yfqh">
+                <img src="images/p2/yfqh.jpg" alt="" class="bg">
+                <div class="yfqh_back"></div>
+                <div class="_item yfqh-item1" data-list="1"></div>
+                <div class="_item yfqh-item2" data-list="2"></div>
+                <div class="_item yfqh-item3" data-list="3"></div>
+                <div class="_itembox">
+                    <img src="" alt="" class="_list">
+                    <div class="yfqh_close">
+                        <img src="images/p2/close.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- 向下的箭头 -->
+            <div class="downLoad" id="downLoad"></div>
+        </div>
+        <!-- 服务器 -->
+        <div class="fwq">
+            <div class="fwq_top">
+                <img src="images/p3/top.jpg" alt="" class="bg_p_fwq">
+                <div class="fwq_back"><img src="images/back.png" alt=""></div>
+                <div class="swiper-container swiper-container-fwq">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" data-count="1">
+                            <img src="images/p3/1.png" alt="">
+                        </div>
+                        <div class="swiper-slide" data-count="2">
+                            <img src="images/p3/2.png" alt="">
+                        </div>
+                        <div class="swiper-slide" data-count="3">
+                            <img src="images/p3/3.png" alt="">
+                        </div>
+                        <div class="swiper-slide" data-count="4">
+                            <img src="images/p3/4.png" alt="">
+                        </div>
+                        <div class="swiper-slide" data-count="7">
+                            <img src="images/p3/7.png" alt="">
+                        </div>
+                        <div class="swiper-slide" data-count="8">
+                            <img src="images/p3/8.png" alt="">
+                        </div>
+                        <div class="swiper-slide" data-count="9">
+                            <img src="images/p3/9.png" alt="">
+                        </div>
+                        <div class="swiper-slide" data-count="6">
+                            <img src="images/p3/6.png" alt="">
+                        </div>
+                        <div class="swiper-slide" data-count="5">
+                            <img src="images/p3/5.png" alt="">
+                        </div>
+                        <div class="swiper-slide" data-count="10">
+                            <img src="images/p3/10.png" alt="">
+                        </div>
+                        <div class="swiper-slide" data-count="11">
+                            <img src="images/p3/11.png" alt="">
+                        </div>
+                        <div class="swiper-slide" data-count="12">
+                            <img src="images/p3/12.png" alt="">
+                        </div>
+                        <div class="swiper-slide" data-count="13">
+                            <img src="images/p3/13.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev swiper-button-white"></div>
+                    <div class="swiper-button-next swiper-button-white"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="middle_content">
+                <img src="images/p3/1.jpg" alt="">
+            </div>
+            <div class="fwq_footer">
+                <img src="images/p3/footer.jpg" alt="">
+            </div>
+        </div>
+        <div class="lianxi"><img src="images/contact.png" alt=""></div>
+        <div class="lianxi_box lockTouchmove">
+            <div class="contact_inner">
+                <img src="images/contact_box.png" alt="">
+                <div class="lianxi_close"></div>
+                <a href="tel:8008200921" class="contact_tel"></a>
+                <a href="http://unis-huashan.h3c.com" class="contact_web"></a>
+            </div>
+        </div>
+        <script src="qing/js/swiper.min.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/common.js"></script>
+    </div>
+    <div id="share_js"></div>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="http://api.huandengpai.com/sites/all/modules/oceanus_weixin_js_sdk/js/weixn_share_js_sdk.js"></script>
+    <script>
+            function getWXShare( title,desc,link,imgUrl ){
+                var sharecontent = '';
+                $.ajax({
+                    type:"POST",
+                    url:"http://api.huandengpai.com/api/weixin/js/share",
+                    data:{title:title, desc:desc,link:link, imgUrl:imgUrl, visiting_url : window.location.href },
+                    async:false,
+                    success: function(json_data){
+                    //console.log(json_data);
+                        var data = JSON.parse(json_data)
+                        console.log( data );
+                        sharecontent = data.data;
+                        $('#share_js').html(sharecontent);
+                    }
+
+                });
+            }
+    getWXShare( '旭日新生，耀世登场','全新H3C服务器存储耀世登场',window.location.href,'http://qing.huandengpai.com/tem/h3c/images/share.jpg' );
+
+    __setupAllWeixinShare();
+    </script>
+</body>
+</html>

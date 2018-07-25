@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>积分总动员</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <script type="text/javascript">
+      var i = new Date().getTime() % 5;
+      var isDesktop = navigator['userAgent'].match(/(ipad|iphone|ipod|android|windows phone)/i) ? false : true;
+      var fontunit        = isDesktop ? 20 : ((window.innerWidth>window.innerHeight?window.innerHeight:window.innerWidth)/320)*10;
+      document.write('<style type="text/css">'+
+        'html,body {font-size:'+(fontunit<30?fontunit:'30')+'px;}'+
+        (isDesktop?'#welcome,#GameTimeLayer,#GameLayerBG,#GameScoreLayer.SHADE{position: absolute;}':
+        '#welcome,#GameTimeLayer,#GameLayerBG,#GameScoreLayer.SHADE{position:fixed;}@media screen and (orientation:landscape) {#landscape {display: box; display: -webkit-box; display: -moz-box; display: -ms-flexbox;}}')+
+        '</style>');
+  </script>
+  <script>
+    !(function(win, doc){
+      var DesignSize = 640;
+      doc.write('<style>body{max-width: ' + DesignSize + 'px;}</style>');
+      function ss(){
+        var size = (window.innerWidth / DesignSize) * 100;
+        doc.documentElement.style.fontSize = (size < 100 ? size : 100) + 'px';
+      }
+      var evt = 'resize';
+      var timer = null;
+      win.addEventListener(evt,function(){
+        clearTimeout(timer);
+        timer = setTimeout(ss, 300);
+      }, false);
+      win.addEventListener("pageshow",function(e){
+        if (e.persisted){
+          clearTimeout(timer);
+          timer = setTimeout(ss, 300);
+        }
+      }, false);
+      ss();
+    }(window, document));
+	</script>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/createjs.js"></script>
+  <script type="text/javascript" src="js/preloadjs-0.6.2.min.js"></script>
+  <script type="text/javascript" src="js/soundjs-0.6.2.min.js"></script>
+  <script type="text/javascript" src="js/browser-storage.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/index.js"></script>
+</head>
+<body onload="init()" class="lockTouchmove">
+    <div class="GameLayerBox"></div>
+    <div id="GameScoreLayer" class="BBOX SHADE bgc1" style="display:none;">
+      <div >
+        <div id="GameScoreLayer_close"></div>
+        <div id="GameScoreLayer-text"></div>
+        <!-- <div id="GameScoreLayer-bast">最佳</div> -->
+        <div class="GameScoreLayer_integral"></div>
+        <div class="GameScoreLayer_frequency"></div>
+        <div id="GameScoreLayer-btn" class="BOX">
+          <div class="btn BOX-S" onclick="replayBtn()"></div>&nbsp;
+          <a href="http://haierclub.huandengpai.com/haier/club/points/gain" class="go_to_shop"></a>
+        </div>
+      </div>
+    </div>
+    <div id="welcome" class="SHADE BOX-M">
+      <div class="welcome-bg FILL"><img src="images/welcome.jpg" alt=""></div>
+          <div id="ready-btn" class="btn loading"><img src="images/start.png" alt=""></div>
+          <div class="welcome_rules">
+              <img src="images/rules.png" alt="">
+          </div>
+    </div>
+    <div class="pop-ups">
+        <!-- 规则 -->
+        <div class="_rules">
+            <img src="images/_rules.png" alt="">
+            <div class="_rules_close" ></div>
+        </div
+    </div>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery.resize.js"></script>
+    <script>
+      $('.lockTouchmove').each(function(){
+            $(this)[0].addEventListener('touchmove',function(e){
+                e.preventDefault();
+            },false);
+      });
+    </script>
+    <!--微信分享start -->
+    <div id="share_js"></div>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="http://api.huandengpai.com/sites/all/modules/oceanus_weixin_js_sdk/js/weixn_share_js_sdk.js"></script>
+    <script>
+          function getWXShare( title,desc,link,imgUrl ){
+                var sharecontent = '';
+                $.ajax({
+                    type:"POST",
+                    url:"http://api.huandengpai.com/api/weixin/js/share",
+                    data:{title:title, desc:desc,link:link, imgUrl:imgUrl, visiting_url : window.location.href },
+                    async:false,
+                    success: function(json_data){
+                    //console.log(json_data);
+                        var data = JSON.parse(json_data)
+                        console.log( data );
+                        sharecontent = data.data;
+                        $('#share_js').html(sharecontent);
+                    }
+
+                });
+          }
+          getWXShare(
+              '被这个游戏刷屏啦！海尔积分商城直接抵现，年底积分大馈赠！',
+              '幸福小苹果，积分滚滚来，一年一次积分大抢夺！',
+              window.location.href,'http://qing.huandengpai.com/tem/apple/images/share.png'
+          );
+          __setupAllWeixinShare();
+    </script>
+</body>
+</html>

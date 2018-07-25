@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- <meta http-equiv="refresh" content="0; url='https://mp.weixin.qq.com/s/wUzhXXwdfo1uKOtnkxLQpQ'"> -->
+    <title></title>
+    <script>
+		function QueryString(key) {
+		    var reg= new RegExp (key + "=([^&#]*)","i");
+		    var value = reg.exec(window.location.href);
+		    if ( value == null )return null;
+		    return decodeURI(value[1]);
+		}
+		window.location.href=QueryString('goto');
+	</script>
+</head>
+<body>
+	<div class="goto">页面跳转中...</div>
+</body>
+</html>

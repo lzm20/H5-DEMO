@@ -1,0 +1,292 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Qlik Sense Tour 2017 </title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <script src="qing/lib/jquery/jquery.min.js"></script>
+  <script>
+    !(function(win, doc){
+      function ss(){
+        var size = (window.innerWidth / 640) * 100;
+        doc.documentElement.style.fontSize = (size < 100 ? size : 100) + 'px';
+        if(typeof mySwiper != "undefined") mySwiper.onResize();
+        if(typeof adapterFullScreen != "undefined") adapterFullScreen(0);
+      }
+      var evt = 'resize';
+      var timer = null;
+      win.addEventListener(evt,function(){
+        clearTimeout(timer);
+        timer = setTimeout(ss, 300);
+      }, false);
+      win.addEventListener("pageshow",function(e){
+        if (e.persisted){
+          clearTimeout(timer);
+          timer = setTimeout(ss, 300);
+        }
+      }, false);
+      ss();
+    }(window, document));
+    </script>
+</head>
+<body>
+    <div class="gridContainer">
+        <audio src="http://qing.huandengpai.com/tem/qliksense/mp3/bgmusic10.mp3" id="audio1" loop autoplay="autoplay"></audio>
+        <link href="qing/css/reset.css" rel="stylesheet" type="text/css">
+        <link href="qing/css/swiper.min.css" rel="stylesheet" type="text/css">
+        <link href="css/common.css" rel="stylesheet" type="text/css">
+        <div class="_qp lockTouchmove">
+            <div id="lp" class="lockTouchmove">
+                <img style="position: absolute;width: 30%;height: auto;left: 35%;top: 4rem;" src="qing/images/loading/_loadingC.png" alt="">
+                <img class="_loadingZ" style="position: absolute;width: 30%;height: auto;left: 35%;top: 4rem;" src="qing/images/loading/_loadingZ.png" alt="">
+                <div style="position: absolute;width: 100%;height: auto;left: 0;top: 2.15rem;text-align: center;color: #fff;font-size: .3rem;" class="_laoding_text">
+                    <span></span>
+                </div>
+            </div>
+            <audio src=""></audio>
+            <div class="switch"><img src="images/open.png" alt=""></div>
+            <div class="swiper-container swiper-container-main">
+                <div class="swiper-wrapper">
+                    <!-- 首页 -->
+                    <div class="swiper-slide p0">
+                        <img src="images/p0.jpg" alt="" class="img-bg">
+                        <div class="p0-1"><img src="images/p0/1.png" alt=""></div>
+                        <div class="p0-2"><img src="images/p0/2.png" alt=""></div>
+                        <div class="p0-3"><img src="images/p0/3.png" alt=""></div>
+                        <div class="p0-4"><img src="images/p0/4.png" alt=""></div>
+                        <div class="p0-5"><img src="images/p0/5.png" alt=""></div>
+                    </div>
+                    <div class="swiper-slide p1">
+                        <img src="images/p1.jpg" alt="" class="img-bg">
+                        <div class="p1-logo">
+                          <img src="images/p1/logo.png" alt="">
+                        </div>
+                        <div class="p1-1">
+                          <img src="images/p1/1.png" alt="">
+                        </div>
+                        <ul class='p1-list'>
+                          <li class="p1-item item1">
+                            <div class="inner">
+                              <div class="item-left">
+                                <span class='point point1'></span>
+                              </div>
+                              <div class="item-right">
+                                <div class="item-inner"><div class="inner-after"></div></div>
+                                <div class="btn btn1"></div>
+                              </div>
+                            </div>
+                            <div class="item-prom">开展分析的企业可实现收入增长<span><span class='progress-num'>0</span>%</span></div>
+                          </li>
+                          <li class="p1-item item2">
+                            <div class="inner">
+                              <div class="item-left">
+                                <span class='point point2'></span>
+                              </div>
+                              <div class="item-right">
+                                <div class="item-inner"><div class="inner-after"></div></div>
+                                <div class="btn btn2"></div>
+                              </div>
+                            </div>
+                            <div class="item-prom">使用实时或接近实时BI分析可节省成本<span><span class='progress-num'>0</span>%</span></div>
+                          </li>
+                          <li class="p1-item item3">
+                            <div class="inner">
+                              <div class="item-left">
+                                <span class='point point3'></span>
+                              </div>
+                              <div class="item-right">
+                                <div class="item-inner"><div class="inner-after"></div></div>
+                                <div class="btn btn3"></div>
+                              </div>
+                            </div>
+                            <div class="item-prom">注重协作的企业，客户服务满意度将比其他企业高出近<span><span class='progress-num'>0</span>%</span></div>
+                          </li>
+                          <li class="p1-item item4">
+                            <div class="inner">
+                              <div class="item-left">
+                                <span class='point point4'></span>
+                              </div>
+                              <div class="item-right">
+                                <div class="item-inner"><div class="inner-after"></div></div>
+                                <div class="btn btn4"></div>
+                              </div>
+                            </div>
+                            <div class="item-prom">分析技术可将客户响应时间加快<span><span class='progress-num'>0</span>%</span></div>
+                          </li>
+                          <li class="p1-item item5">
+                            <div class="inner">
+                              <div class="item-left">
+                                <span class='point point5'></span>
+                              </div>
+                              <div class="item-right">
+                                <div class="item-inner"><div class="inner-after"></div></div>
+                                <div class="btn btn5"></div>
+                              </div>
+                            </div>
+                            <div class="item-prom">分析技术能帮企业将营业利润增长<span><span class='progress-num'>0</span>%</span></div>
+                          </li>
+                        </ul>
+                    </div>
+                    <div class="swiper-slide p2">
+                        <img src="images/p2.jpg" alt="" class="img-bg">
+                        <div class="p2-logo"><img src="images/p2/logo.png" alt=""></div>
+                        <div class="p2-1"><img src="images/p2/1.png" alt=""></div>
+                        <di class="p2-2">
+                            <img src="images/p2/i1.png" alt="" class="i1">
+                            <img src="images/p2/i2.png" alt="" class="i2">
+                            <img src="images/p2/i3.png" alt="" class="i3">
+                            <img src="images/p2/i4.png" alt="" class="i4">
+                            <img src="images/p2/i5.png" alt="" class="i5">
+                            <div class="line1">
+                                <div class="xian1">
+                                    <img src="images/p2/x1.png">
+                                </div>
+                            </div>
+                            <div class="line2">
+                                <div class="xian2">
+                                    <img src="images/p2/x2.png">
+                                </div>
+                            </div>
+                            <div class="line3">
+                                <div class="xian3">
+                                    <img src="images/p2/x3.png">
+                                </div>
+                            </div>
+                            <div class="line4">
+                                <div class="xian4">
+                                    <img src="images/p2/x4.png">
+                                </div>
+                            </div>
+                            <div class="line5">
+                                <div class="xian5">
+                                    <img src="images/p2/x5.png">
+                                </div>
+                            </div>
+                        </di>
+                    </div>
+                    <div class="swiper-slide p3">
+                        <img src="images/p3.jpg" alt="" class="img-bg">
+                        <div class="p3-logo"><img src="images/p3/logo.png"></div>
+                        <div class="p3-1"><img src="images/p3/1.png" alt=""></div>
+                        <div class="p3-c p3-c-1"><img src="images/p3/c1.png" alt=""></div>
+                        <div class="p3-c p3-c-2"><img src="images/p3/c2.png" alt=""></div>
+                        <div class="p3-c p3-c-3"><img src="images/p3/c3.png" alt=""></div>
+                        <div class="p3-c p3-c-4"><img src="images/p3/c4.png" alt=""></div>
+                        <div class="p3-c p3-c-5"><img src="images/p3/c5.png" alt=""></div>
+                        <div class="p3-c p3-c-6"><img src="images/p3/c6.png" alt=""></div>
+                        <div class="p3-c p3-c-7"><img src="images/p3/c7.png" alt=""></div>
+                        <div class="p3-c p3-c-8"><img src="images/p3/c8.png" alt=""></div>
+                    </div>
+                    <div class="swiper-slide p6">
+                    	<img src="images/p6/bg.jpg" alt="" class="img-bg">
+                    	<div class="cicle1">
+                    		<img src="images/p6/1.png" alt="">
+                    	</div>
+                    	<div class="cicle2">
+                    		<img src="images/p6/2.png" alt="">
+                    	</div>
+                    	<div class="cicle3">
+                    		<img src="images/p6/3.png" alt="">
+                    	</div>
+                    	<div class="cicle4">
+                    		<img src="images/p6/4.png" alt="">
+                    	</div>
+                    	<div class="cicle5">
+                    		<img src="images/p6/5.png" alt="">
+                    	</div>
+                    	<div class="cicle6">
+                    		<img src="images/p6/6.png" alt="">
+                    	</div>
+                    	<div class="xiaocicle">
+                    		<img src="images/p6/xiao_cicle.png" alt="">
+                    	</div>
+                    </div>
+                    <div class="swiper-slide p4">
+                        <img src="images/p4.jpg" alt="" class="img-bg">
+                        <div class="p4-1"><img src="images/p4/1.png" alt=""></div>
+                        <div class="go-meeting">会议日程</div>
+                        <div class="go-form">立即报名</div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- 向下的箭头 -->
+            <div class="downLoad" id="downLoad"></div>
+        </div>
+        <div class="meet">
+          <div class="meeting">
+              <img src="images/p5/1.jpg" alt="">
+              <img src="images/p5/2.jpg" alt="">
+              <div class=part1>
+                  <img src="images/p5/3.jpg" alt="">
+                  <div class="tab">
+                      <div class="lt cur">行业及业务场景分会场</div>
+                      <div class="rt">创新技术分会场</div>
+                  </div>
+                  <div class="tab-content">
+                      <img src="images/p5/a1.jpg" alt="">
+                  </div>
+                  <div style="width:6.4rem;background-color: #fff;padding-top: 0.3rem;padding-bottom: 0.3rem;">
+                    <div class="go-form1">立即报名</div>
+                  </div>
+              </div>
+              <div class="back"><img src="images/back.png" alt=""></div>
+          </div>
+        </div>
+        <div class="hideEle">
+            <img src="images/p5/a1.jpg" alt="">
+            <img src="images/p5/a2.jpg" alt="">
+        </div>
+        <script src="qing/js/swiper.min.js"></script>
+        <script src='qing/lib/create/preloadjs-0.6.2.min.js'></script>
+        <script src="qing/lib/create/soundjs-0.6.2.min.js"></script>
+        <script src="js/common.js"></script>
+        <script>
+            var mySwiper = new Swiper('.swiper-container-main',{
+                direction: 'vertical',
+                onInit: function(swiper){
+                    if( swiper.activeIndex >= swiper.slidesSizesGrid.length-1 ){
+                        DownUp.hide();
+                    }else{
+                        DownUp.show();
+                    }
+                },
+                onSlideChangeEnd: function(swiper){
+                    showPage(swiper);
+                }
+            });
+        </script>
+    </div>
+    <!--微信分享start -->
+    <div id="share_js"></div>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="http://api.huandengpai.com/sites/all/modules/oceanus_weixin_js_sdk/js/weixn_share_js_sdk.js"></script>
+    <script>
+        function getWXShare( title,desc,link,imgUrl ){
+              var sharecontent = '';
+              $.ajax({
+                  type:"POST",
+                  url:"http://api.huandengpai.com/api/weixin/js/share",
+                  data:{title:title, desc:desc,link:link, imgUrl:imgUrl, visiting_url : window.location.href },
+                  async:false,
+                  success: function(json_data){
+                  //console.log(json_data);
+                      var data = JSON.parse(json_data)
+                      console.log( data );
+                      sharecontent = data.data;
+                      $('#share_js').html(sharecontent);
+                  }
+              });
+        }
+        getWXShare(
+            '简约分析之道，洞察数据真谛',
+            'Qlik Sense Tour 2017-6月6日|北京',
+            window.location.href,
+            'http://qing.huandengpai.com/tem/qliksense/images/share.jpg'
+        );
+        __setupAllWeixinShare();
+    </script>
+</body>
+</html>

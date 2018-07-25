@@ -1,0 +1,319 @@
+.gridContainer{
+  background-color: #000;
+}
+html,body{
+  background-color: #000;
+}
+#lp{
+    position: absolute;
+    width: 100%;
+    height: 10.4rem;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #000;
+}
+.swiper-slide{overflow: hidden;}
+.swiper-slide > img{width: 100%;}
+._ab{position: absolute;top: 0;left: 0;}
+._op0{opacity: 0;}
+._re{position: relative;}
+._loadingZ{-webkit-animation: _loading 2s linear infinite;animation: _loading 2s linear infinite}
+@-webkit-keyframes _loading
+{
+    0%   {-webkit-transform:rotate(0deg);}
+    100% {-webkit-transform:rotate(360deg);}
+}
+@keyframes _loading
+{
+    0%   {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+/*向下的箭头*/
+.downLoad{
+  width: .52rem;
+  height: .37rem;
+  position: absolute;
+  left: 2.94rem;
+  top: 9.36rem;
+  z-index: 2;
+  background-image: url(../qing/images/arrow.png);
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  display: none;
+}
+.downLoad{-webkit-animation: topDown 2s infinite;}
+@-webkit-keyframes topDown{
+  0%{-webkit-transform:translate3d(0,0,0);}
+  100% { -webkit-transform:translate3d(0,-50%,0);}
+}
+.Mp3Con {
+    position: absolute;
+    right: 5%;
+    top: .3rem;
+    z-index: 999;
+    opacity: 0.5;
+    transition: all 2s;
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+}
+.Mp3ConAnimate {
+  animation: roundIng 10s linear infinite;
+  -webkit-animation: roundIng 10s linear infinite;
+  -moz-animation: roundIng 10s linear infinite;
+}
+@keyframes roundIng {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes roundIng {
+  0% {
+    -webkit-transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes roundIng {
+  0% {
+    -moz-transform: rotate(0);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+
+
+/*常用动画*/
+@-webkit-keyframes fadeIn
+{
+    0%  {opacity: 0}
+    100%  {opacity: 1}
+}
+@-webkit-keyframes fadeOut
+{
+    0%  {opacity: 1}
+    100%  {opacity: 0}
+}
+@-webkit-keyframes leftFadeIn
+{
+    0%  {-webkit-transform:translate(-.2rem, 0);opacity: 0}
+    100%  {-webkit-transform: translate(0, 0);opacity: 1}
+}
+@-webkit-keyframes bottomFadeIn
+{
+    0%  {-webkit-transform:translate(0, -.2rem);opacity: 0}
+    100%  {-webkit-transform: translate(0, 0);opacity: 1}
+}
+@-webkit-keyframes rightFadeIn
+{
+    0%  {-webkit-transform:translate(.2rem, 0);opacity: 0}
+    100%  {-webkit-transform: translate(0, 0);opacity: 1}
+}
+@-webkit-keyframes topFadeIn
+{
+    0%  {-webkit-transform:translate(0, .2rem);opacity: 0}
+    100%  {-webkit-transform: translate(0, 0);opacity: 1}
+}
+
+@-webkit-keyframes textIn{
+  0%{-webkit-transform:translate3d(0rem,0.2rem,0rem);opacity: 0;}
+  10%{-webkit-transform:translate3d(0rem,0.1rem,0rem);opacity: 1;}
+  33%{-webkit-transform:translate3d(0rem,0rem,0rem);opacity: 1;}
+  66%{-webkit-transform:translate3d(0rem,0.1rem,0rem);opacity: 1;}
+  100%{-webkit-transform:translate3d(0rem,0rem,0rem);opacity: 1;}
+}
+.gridContainer{
+    color: #fff;
+}
+/*添加类代表特定的东西*/
+.page{
+  position: absolute;
+  top:0rem;
+  left:0rem;
+  width: 6.4rem;
+  height: 10.4rem;
+}
+.page2{
+  display: none;
+}
+.page2{
+  background-color: rgba(0,0,0,0.8);
+}
+.play-video{
+  position: absolute;
+  left: 2.54rem;
+  top: 8.36rem;
+  width: 1.32rem;
+  height: 1.32rem;
+  background-image: url('../images/play-video.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  opacity: 0;
+}
+.pa .play-video{
+  -webkit-animation:fadeIn 0.8s linear 3.4s both;
+}
+.videobox{
+  position: fixed;
+  top:0rem;
+  left:0rem;
+  right: 0rem;
+  bottom: 0rem;
+  background-color: rgba(0,0,0,1);
+  z-index: 99;
+}
+#myVideo{
+  position: absolute;
+  top:0rem;
+  left:0rem;
+  right: 0rem;
+  bottom: 0rem;
+  width: 6.4rem;
+  height: 10.4rem;
+}
+.close-video{
+  position: absolute;
+    top: 15px;
+    right: 15px;
+  width: 50px;
+  height: 50px;
+  background-image: url('../images/videoClose.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40%;
+  z-index: 999999999;
+}
+.back-play{
+  position: absolute;
+  left: 2.17rem;
+  top: 3.93rem;
+  width: 2.06rem;
+  height: 0.58rem;
+  background-image: url('../images/replay.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.logo{
+  position: absolute;
+  left: 0.4rem;
+  top: 0.47rem;
+  width: 2.18rem;
+  height: 0.29rem;
+}
+.p1-con{
+  position: absolute;
+  left: 0.76rem;
+  top: 1.6rem;
+  width: 4.88rem;
+  height: 4.53rem;
+  -webkit-transform:scale(0);
+}
+.pa .p1-con{
+  -webkit-animation:p1con 1.4s ease 0s both;
+}
+@-webkit-keyframes p1con{
+  0%{
+    -webkit-transform:scale(0);
+  }
+  100%{
+    -webkit-transform:scale(1);
+  }
+}
+.p1-con2a,
+.p1-con2b,
+.p1-con2c,
+.p1-con2d,
+.p1-con2e
+{
+  position: absolute;
+  left: 1.05rem;
+  top: 6.11rem;
+  width: 4.3rem;
+  height: 1.89rem;
+  opacity: 0;
+}
+.pa .p1-con2a{
+  -webkit-animation:textIn 0.6s linear 1.2s both;
+}
+.pa .p1-con2b{
+  -webkit-animation:textIn 0.6s linear 1.6s both;
+}
+.pa .p1-con2c{
+  -webkit-animation:textIn 0.6s linear 2s both;
+}
+.pa .p1-con2d{
+  -webkit-animation:textIn 0.6s linear 2.4s both;
+}
+.pa .p1-con2e{
+  -webkit-animation:textIn 0.6s linear 2.8s both;
+}
+.p2-con1{
+  position: absolute;
+  left: 1.75rem;
+  top: 1.23rem;
+  width: 2.9rem;
+  height: 2.69rem;
+}
+.p2-con2{
+  position: absolute;
+  left: 2.1rem;
+  top: 4.88rem;
+  width: 2.2rem;
+  height: 2.2rem;
+}
+.p2_b1{
+  position: absolute;
+  left: 2.56rem;
+  top: 7.29rem;
+  /* width: 4.75rem; */
+  height:0.23rem;
+}
+.p2_b2{
+  position: absolute;
+  left: 1.81rem;
+  top: 7.9rem;
+  width: 2.79rem;
+  height: 0.23rem;
+}
+.btn1{
+  position: absolute;
+  left: 2.05rem;
+  top: 8.38rem;
+  width: 2rem;
+  height: 0.26rem;
+  background-image: url('../images/btn1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.btn2{
+  position: absolute;
+  left: 2.05rem;
+  top:8.89rem;
+  width: 1.52rem;
+  height: 0.25rem;
+  background-image: url('../images/btn2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.btn3{
+  position: absolute;
+  left: 2.05rem;
+  top: 9.4rem;
+  width: 2.26rem;
+  height: 0.25rem;
+  background-image: url('../images/btn3.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+

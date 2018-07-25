@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <!--  添加到主屏幕后，全屏显示-->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="">
+    <title>ss</title>
+    <script type="text/javascript">
+        if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+            var phoneScale = parseInt(window.screen.width)/640;
+            document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+        } else {
+            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+        }
+    </script>
+    <link rel="stylesheet" href="lib/css/swiper/swiper.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+    <div class="_qp lockTouchmove">
+      <div id="lp" class="lockTouchmove">
+        <img style="position: absolute;width: 30%;height: auto;left: 35%;top: 400px;" src="images/_loadingC.png" alt="">
+        <img class="_loadingZ" style="position: absolute;width: 30%;height: auto;left: 35%;top: 400px;" src="images/_loadingZ.png" alt="">
+        <div style="position: absolute;width: 100%;height: auto;left: 0;top: 215px;text-align: center;color: #fff;font-size: 30px;" class="_laoding_text">
+          <span></span>
+        </div>
+      </div>
+      <audio id="audio11" src="yy/qyy.mp3" autoplay="autoplay" loop="loop"></audio>
+      <div class="swiper-container swiper-container-main">
+        <div class="swiper-wrapper">
+          <div id="p0" class="swiper-slide">
+            <img class="p0_bg" src="images/1.jpg">
+            <div class="zi_t"><img src="images/1/zi.png" alt=""></div>
+            <div class="yaoyue">
+              <div class="c1 c"><img src="images/1/c1.png" alt=""></div>
+              <div class="c2 c"><img src="images/1/c2.png" alt=""></div>
+              <div class="c3 c"><img src="images/1/c3.png" alt=""></div>
+              <div class="c4 c"><img src="images/1/c4.png" alt=""></div>
+            </div>
+            <div class="c-zi"><img src="images/1/c-zi.png" alt=""></div>
+          </div>
+          <div id="p1" class="swiper-slide">
+            <img class="p1_bg" src="images/2.jpg">
+            <div class="o1"><img src="images/2/1.png" alt=""></div>
+            <div class="o2"><img src="images/2/2.png" alt=""></div>
+            <div class="p1_line"><div></div></div>
+            <div class="p1_z1"><img src="images/2/zi1.png" alt=""></div>
+            <div class="p1_z2"><img src="images/2/zi2.png" alt=""></div>
+            <div class="p1_z3"><img src="images/2/zi3.png" alt=""></div>
+            <div class="p1_z4"><img src="images/2/zi4.png" alt=""></div>
+            <div class="p1_z5"><img src="images/2/zi5.png" alt=""></div>
+            <div class="p1_z6"><img src="images/2/zi6.png" alt=""></div>
+            <div class="p1_z7"><img src="images/2/zi7.png" alt=""></div>
+            <div class="p1_line1"></div>
+            <div class="p1_line2"></div>
+            <div class="p1_line3"></div>
+            <div class="p1_line4"></div>
+          </div>
+          <div id="p2" class="swiper-slide">
+            <img class="p2_bg" src="images/3.jpg">
+            <div class="cicle1"><img src="images/3/1.png" alt=""></div>
+            <div class="cicle2"><img src="images/3/2.png" alt=""></div>
+            <div class="cicle3"><img src="images/3/3.png" alt=""></div>
+            <div class="cicle4"><img src="images/3/4.png" alt=""></div>
+            <div class="cicle5"><img src="images/3/5.png" alt=""></div>
+            <div class="cicle6"><img src="images/3/6.png" alt=""></div>
+            <div class="xiaocicle"><img src="images/3/xiao_cicle.png" alt=""></div>
+          </div>
+          <div id="p3" class="swiper-slide">
+            <img class="p3_bg" src="images/4.jpg">
+            <a href="javascript:void(0);" onclick="tzbd()" class="baoming">立即报名</a>
+            <div class="line"><div></div></div>
+            <div class="p3_zi1"><img src="images/4/1.png" alt=""></div>
+            <div class="p3_zi2"><img src="images/4/2.png" alt=""></div>
+            <div class="p3_zi3"><img src="images/4/3.png" alt=""></div>
+            <div class="p3_zi4"><img src="images/4/4.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="downLoad" id="downLoad"></div>
+    </div>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/swiper/swiper.min.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+      var mySwiper = new Swiper('.swiper-container-main',{
+        direction: 'vertical',
+        onInit: function(swiper){
+          if( swiper.activeIndex >= swiper.slidesSizesGrid.length-1 ){
+            DownUp.hide();
+          }else{
+            DownUp.show();
+          }
+        },
+        onSlideChangeEnd: function(swiper){
+          showPage(swiper);
+        }
+      });
+      function tzbd(){
+        window.location.href="http://qlik.pptology.com/u/register"+"?channel="+GetQueryString("channel");
+      }
+      function GetQueryString(name)
+      {
+           var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+           var r = window.location.search.substr(1).match(reg);
+           if(r!=null)return  unescape(r[2]); return null;
+      }
+    </script>
+</body>
+</html>

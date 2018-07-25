@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <!--  添加到主屏幕后，全屏显示-->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="">
+    <title>粽香•家乡 浓情端午</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/common.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+            var phoneScale = parseInt(window.screen.width)/640;
+            document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+        } else {
+            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+        }
+    </script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?99e5251bf76b07cdde984f13380512a6";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/puzzleGame.js"></script>
+    <script src="js/browser-storage.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var todate = new Date();
+  var str1 = parseInt(todate.getFullYear().toString() + ("0" + (todate.getMonth() + 1)).slice(-2).toString() + ("0" + todate.getDate()).slice(-2).toString());
+            console.log(str1);
+            var startTime=20170529;
+            var endTime=20170601;
+            $(".start").click(function(){
+                if((str1>startTime || str1==startTime) && str1<=endTime){
+                    //当前的时间大于或者等于活动开始时间  并且小于活动结束时间
+                    $(".game_home").fadeOut();
+                }else if(str1<startTime){
+                    //当前时间小于活动开始时间
+                    $(".activity_start").fadeIn();
+                }else if(str1>endTime){
+                    //当前时间大于活动结束时间
+                    $(".activity_end").fadeIn();
+                }
+            })
+            var pg = new puzzleGame(
+                '#imgArea'
+            )
+            //检测游戏状态
+            function checkGameStart(noGame, hasGame) {
+                console.log(pg.getGameStatus());
+                if (pg.getGameStatus()) {
+                    //游戏复位
+                    if (confirm('已经在游戏中，确定要重新开始？')) {
+                        hasGame();
+                    }
+                } else {
+                        noGame();
+                }
+            }
+            var time=30;
+            var cishu_count=0;
+            $("#start").click(function() {
+                var $button = $(this).find('.button');
+                checkGameStart(function() {
+                    pg.startGame(function(){
+                        console.log("游戏成功之后触发这儿!");
+                        pg.state="successful";
+                    })
+                    lastCount = BrowserStorage.api.get( rdata);
+
+                    if(rdata!=lastCount.key){
+                        lastCount.value = 0;
+                    }
+                    if(JSON.parse(BrowserStorage.api.get(rdata).value)==null){
+                        cishu_count=cishu_count+1;
+                        pg.browserStorage(cishu_count);
+                    }else{
+                        cishu_count=JSON.parse(BrowserStorage.api.get(rdata).value).count+1;
+                    }
+                    console.log(cishu_count);
+                    pg.browserStorage(cishu_count);
+                    var duixiang=BrowserStorage.api.get(rdata).value;
+                    // console.log(duixiang)
+                    if(duixiang==null){
+                        $button.css({"background":"url('images/youxizhong1.png')no-repeat"});
+                    }else{
+                        var _cishu=JSON.parse(BrowserStorage.api.get(rdata).value).count;
+                        if(_cishu==3||_cishu>3){
+                            _cishu=3;
+                             $button.css({"background":"url('images/kaishi.png')no-repeat"});
+                        }else{
+                            $button.css({"background":"url('images/youxizhong1.png')no-repeat"});
+                        }
+                    }
+                }, function() {
+                    pg.resetGame();
+                    $button.css({"background":"url('images/youxizhong1.png')no-repeat"});
+                })
+            })
+            $(".rules_btn").click(function(){
+                $(".rules").fadeIn();
+            })
+            $(".close").click(function(){
+                $(".rules").fadeOut();
+            })
+            $(".share").click(function(){
+                $(".tanchuangbox").hide();
+                $(".share_box").show();
+            })
+            $(".time_share").click(function(){
+                $("._time_end").hide();
+                $(".end-share").addClass('tm').show();
+                $(".end-share.tm").click(function(){
+                    $("._time_end").show();
+                    $(".end-share").hide();
+                })
+            })
+            $(".share_box").click(function(){
+                $(".share_box").hide();
+                $(".tanchuangbox").show();
+            })
+            $(".end_share").click(function(){
+                $("._end").hide();
+                $(".end-share").addClass('ed').show();
+                $(".end-share.ed").click(function(){
+                    $("._end").show();
+                    $(".end-share").hide();
+                })
+            })
+            $(".game_close,.play_again").click(function(){
+                $(".game_end").fadeOut();
+                // 游戏状态重新恢复为失败
+                pg.state="failure";
+                // 时间重置30
+                pg.time=30;
+                $(".time span").html(pg.creatTimeText(pg.time)+'S');
+                // 检测游戏状态
+                pg.isProgramStatus = false;
+                // 重置按钮的背景图
+                $("#start .button").css({"background":"url('images/kaishi.png')no-repeat"});
+                // 复位
+                pg.resetGame();
+            })
+            $(".go_to_choujiang").click(function(){
+                var _source=QueryString("__source_user_id");
+                //window.location.href="http://gamebox.oceanus-data.com/haier/user/game/show/enter?lottery_nid=743&openid="+_source;
+                window.location.href="http://gamebox.huandengpai.com/haier/user/game/show/enter?lottery_nid=849&openid="+_source;
+            })
+            function QueryString(key) {
+                var reg= new RegExp (key + "=([^&#]*)","i");
+                var value = reg.exec(window.location.href);
+                if ( value == null )return null;
+                return decodeURI(value[1]);
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="lp" class="lockTouchmove">
+        <img style="position: absolute;width: 30%;height: auto;left: 35%;top: 400px;" src="/tem/puzzle/images/_loadingC.png" alt="">
+        <img class="_loadingZ" style="position: absolute;width: 30%;height: auto;left: 35%;top: 400px;" src="/tem/puzzle/images/_loadingZ.png" alt="">
+        <div style="position: absolute;width: 100%;height: auto;left: 0;top: 2.15rem;text-align: center;color: #fff;font-size: 30px;" class="_laoding_text">
+            <span></span>
+        </div>
+    </div>
+    <div class="gridContainer">
+        <audio id='audiobg' src="mus2.mp3" loop='loop'></audio>
+        <div class="_qp lockTouchmove">
+            <div id="wrap">
+                <div id="character">
+                    <div class="time"><span style='padding-right:15px;'>30</span>S</div>
+                    <div class="orgimage">
+                        <img src="images/random/1.jpg">
+                    </div>
+                    <!-- <div id="level">
+                        <div class="choose_row" data-row='{"row":3,"col":3}'></div>
+                        <div class="choose_row choose_row2" data-row='{"row":4,"col":4}'></div>
+                    </div> -->
+                </div>
+                <div id="content">
+                    <div id="imgArea"></div>
+                </div>
+                <div id="start"><div class="button"></div></div>
+            </div>
+            <div class="game_home">
+                <div class="start"></div>
+                <div class="rules_btn"></div>
+                <div class="shou-zi">
+                    <img src="images/shou-zi.png" alt="">
+                </div>
+                <div class="shou-cen">
+                    <img src="images/cen1.png" alt="" class="cen1">
+                    <img src="images/cen2.png" alt="" class="cen2">
+                    <img src="images/cen3.png" alt="" class="cen3">
+                    <img src="images/cen4.png" alt="" class="cen4">
+                    <img style="left: 46px;" src="images/cen5.png" alt="" class="cen5">
+                    <img style="left: 46px;" src="images/cen6.png" alt="" class="cen6">
+                </div>
+                <div class="rules">
+                    <div>
+                        <img src="images/rules.png" alt="">
+                        <div class="close"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="game_end">
+                <div class="_time_end">
+                    <img src="images/time_end.png" alt="">
+                    <div class="game_frequency"></div>
+                    <div class="play_again"></div>
+                    <div class="time_share"></div>
+                </div>
+                <div class="_end">
+                    <img src="images/end.png" alt="">
+                    <div class="game_integral"></div>
+                    <div class="end_share"></div>
+                    <a class="go_to_choujiang" href="javascript:void(0);"></a>
+                </div>
+                <div class="end-share">
+                    <img src="images/share_1.png">
+                </div>
+            </div>
+            <div class="jihuiwan">
+                <div class="tanchuangbox">
+                    <div class="share"></div>
+                </div>
+                <div class="share_box">
+                    <img src="images/share_1.png">
+                </div>
+            </div>
+            <div class="activity_start">
+                <img src="images/weikaishi1.png">
+            </div>
+            <div class="activity_end">
+                <img src="images/huodongjieshu.png">
+            </div>
+        </div>
+    </div>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/common.js"></script>
+     <!--微信分享start -->
+    <div id="share_js"></div>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="http://api.huandengpai.com/sites/all/modules/oceanus_weixin_js_sdk/js/weixn_share_js_sdk.js"></script>
+    <script>
+        function getWXShare( title,desc,link,imgUrl ){
+              var sharecontent = '';
+              $.ajax({
+                  type:"POST",
+                  url:"http://api.huandengpai.com/api/weixin/js/share",
+                  data:{title:title, desc:desc,link:link, imgUrl:imgUrl, visiting_url : window.location.href,weixin:1 },
+                  async:false,
+                  success: function(json_data){
+                  //console.log(json_data);
+                      var data = JSON.parse(json_data)
+                      console.log( data );
+                      sharecontent = data.data;
+                      $('#share_js').html(sharecontent);
+                  }
+              });
+        }
+        getWXShare( '情意融融过端午，开开心心赚话费，爱“拼”才会赢！',
+                '央视陪你过端午，给你“好看”、给你“好玩”、给你“好礼”！幸运话费“拼”出来！',
+                'http://qing.huandengpai.com/goto.html?goto=https://mp.weixin.qq.com/s/wUzhXXwdfo1uKOtnkxLQpQ?',
+                'http://qing.huandengpai.com/tem/cctvpuzzle/images/wxshare.jpg');
+        __setupAllWeixinShare();
+    </script>
+</body>
+</html>
